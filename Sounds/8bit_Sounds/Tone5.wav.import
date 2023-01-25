@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tone5.wav-1f011b06d7c0f7048a5d3ecfb4fe4bce.sample"
+
+[deps]
+
+source_file="res://Sounds/8bit_Sounds/Tone5.wav"
+dest_files=[ "res://.import/Tone5.wav-1f011b06d7c0f7048a5d3ecfb4fe4bce.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

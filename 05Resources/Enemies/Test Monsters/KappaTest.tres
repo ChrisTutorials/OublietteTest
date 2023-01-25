@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/NPCs/kappa.png" type="Texture" id=1]
+[ext_resource path="res://Script/BaseEnemy.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+name = "Kappa Jr."
+texture = ExtResource( 1 )
+hp = 11
+dmg = 3
+evade = 0
+reply = "Ehehe!"
+reply2 = "So did Monkey tell you their secret?
+... What?? Speak up!"

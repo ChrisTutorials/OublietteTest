@@ -1,0 +1,439 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Sprites/NPCs/kappa.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Goblin/Gob down2.png" type="Texture" id=2]
+[ext_resource path="res://Nokia.tres" type="DynamicFont" id=3]
+[ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=4]
+[ext_resource path="res://Script/Battle.gd" type="Script" id=5]
+[ext_resource path="res://05Resources/Enemies/Test Monsters/KappaTest.tres" type="Resource" id=6]
+[ext_resource path="res://Sprites/Backgrounds/F17Pix.png" type="Texture" id=8]
+[ext_resource path="res://Sounds/8bit_Sounds/Item5.wav" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/8bit_Sounds/Hit1.wav" type="AudioStream" id=11]
+[ext_resource path="res://02test/shader/src/Shaders.tscn" type="PackedScene" id=12]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 176, 0, 16, 16 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.45098, 0.0509804, 0.0509804, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 1.0
+expand_margin_right = 1.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://ui/nokiafc22.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 7
+font_data = SubResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0, 0, 0, 0.490196 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.521569, 0.521569, 0.521569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Goblin:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("EnemyContainer/enemy:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Camera2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "enemy_damaged"
+length = 0.5
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath("EnemyContainer/enemy:modulate")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25, 0.333333, 0.416667, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "exit_battle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "player_damaged"
+length = 0.416667
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath("Goblin:modulate")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25, 0.333333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Battle" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+enemy = ExtResource( 6 )
+
+[node name="F17Pix" type="Sprite" parent="."]
+visible = false
+position = Vector2( -58, 169 )
+texture = ExtResource( 8 )
+
+[node name="Shaders" parent="." instance=ExtResource( 12 )]
+
+[node name="Background" parent="Shaders" index="0"]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="CirclesRegular" parent="Shaders" index="1"]
+visible = true
+modulate = Color( 1, 1, 1, 0.196078 )
+margin_left = -104.0
+margin_top = -27.0
+margin_right = 120.0
+margin_bottom = 3.0
+
+[node name="CirclesTwo" parent="Shaders" index="3"]
+modulate = Color( 1, 1, 1, 0.392157 )
+
+[node name="Goblin" type="TextureRect" parent="."]
+margin_left = 28.0
+margin_top = 147.0
+margin_right = 44.0
+margin_bottom = 163.0
+texture = SubResource( 3 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="enemy" type="TextureRect" parent="EnemyContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+hint_tooltip = "Kappa"
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
+visible = false
+margin_top = 44.0
+margin_right = 40.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 8 )
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+step = 1.0
+value = 50.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_right = 11.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "10/10"
+
+[node name="ActionsPanel" type="Panel" parent="."]
+anchor_left = 0.0234375
+anchor_top = 0.6875
+anchor_right = 0.976562
+anchor_bottom = 0.879167
+custom_styles/panel = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="PlayerData" type="HBoxContainer" parent="ActionsPanel"]
+anchor_top = 0.571429
+anchor_right = 1.0
+anchor_bottom = 0.571429
+margin_left = 5.0
+margin_top = -19.0
+margin_right = -146.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Label" type="Label" parent="ActionsPanel/PlayerData"]
+margin_top = 3.0
+margin_right = 26.0
+margin_bottom = 12.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Goblin"
+
+[node name="ProgressBar" type="ProgressBar" parent="ActionsPanel/PlayerData"]
+margin_left = 30.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 0, 8 )
+size_flags_horizontal = 3
+size_flags_vertical = 4
+custom_styles/fg = SubResource( 4 )
+custom_styles/bg = SubResource( 5 )
+max_value = 10.0
+step = 1.0
+value = 5.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="ActionsPanel/PlayerData/ProgressBar"]
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -11.0
+margin_right = 11.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "10/10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Actions" type="HBoxContainer" parent="ActionsPanel"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = -24.0
+margin_right = -7.99988
+margin_bottom = -4.0
+custom_constants/separation = 5
+alignment = 2
+
+[node name="Fight" type="Button" parent="ActionsPanel/Actions"]
+margin_right = 53.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_constants/hseparation = 6
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = SubResource( 13 )
+text = "Fight"
+
+[node name="Talk" type="Button" parent="ActionsPanel/Actions"]
+margin_left = 58.0
+margin_right = 112.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_constants/hseparation = 6
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = SubResource( 13 )
+text = "Talk"
+
+[node name="Item" type="Button" parent="ActionsPanel/Actions"]
+margin_left = 117.0
+margin_right = 171.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_constants/hseparation = 6
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = SubResource( 13 )
+text = "Item"
+
+[node name="Exit" type="Button" parent="ActionsPanel/Actions"]
+margin_left = 176.0
+margin_right = 230.0
+margin_bottom = 20.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_constants/hseparation = 6
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = SubResource( 13 )
+text = "Exit"
+
+[node name="Textbox" type="Panel" parent="."]
+anchor_right = 1.0
+margin_left = 6.0
+margin_top = 22.0
+margin_right = -6.0
+margin_bottom = 66.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Textbox"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -114.0
+margin_top = 8.0
+margin_right = 103.0
+margin_bottom = 42.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ticker" type="Label" parent="Textbox"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 219.0
+margin_top = -19.0
+margin_right = 240.0
+margin_bottom = -2.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "..."
+align = 2
+valign = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 14 )
+anims/enemy_damaged = SubResource( 15 )
+anims/exit_battle = SubResource( 18 )
+anims/player_damaged = SubResource( 16 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="ItemSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -10.0
+
+[node name="DamageSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -10.0
+
+[connection signal="pressed" from="ActionsPanel/Actions/Fight" to="." method="_on_Fight_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Talk" to="." method="_on_Talk_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Item" to="." method="_on_Item_pressed"]
+[connection signal="pressed" from="ActionsPanel/Actions/Exit" to="." method="_on_Exit_pressed"]
+
+[editable path="Shaders"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://02test/shader/src/EBShader.tres" type="Material" id=1]
+[ext_resource path="res://02test/shader/shaders/WobbleTwo.shader" type="Shader" id=2]
+[ext_resource path="res://02test/shader/sprites/Circles.png" type="Texture" id=3]
+
+[sub_resource type="Shader" id=3]
+code = "shader_type canvas_item;
+
+void fragment() {
+	float diff_y = 0.1 * cos((100.0 * UV.x) + (1.0 * TIME));
+	COLOR = texture(TEXTURE, vec2(UV.y + diff_y, UV.x));
+}"
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/screen_height = 270.0
+
+[node name="Shaders" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = -1.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CirclesRegular" type="TextureRect" parent="."]
+visible = false
+material = SubResource( 4 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+
+[node name="CirclesOne" type="TextureRect" parent="."]
+visible = false
+material = ExtResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+
+[node name="CirclesTwo" type="TextureRect" parent="."]
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -100.0
+margin_top = -9.0
+margin_right = 124.0
+margin_bottom = 21.0
+texture = ExtResource( 3 )

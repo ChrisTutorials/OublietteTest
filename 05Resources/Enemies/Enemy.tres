@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Script/BaseEnemy.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+name = "Enemy"
+hp = 1
+dmg = 0
+evade = 0
+reply = "hi"
+reply2 = ""

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Chime1.wav-1e2d961f076b192b430fd81d6fbec8df.sample"
+
+[deps]
+
+source_file="res://Sounds/8bit_Sounds/Chime1.wav"
+dest_files=[ "res://.import/Chime1.wav-1e2d961f076b192b430fd81d6fbec8df.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
