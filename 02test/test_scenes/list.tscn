@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/Items/BottleSprite.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Untitled 22 1.png" type="Texture" id=2]
@@ -10,6 +10,11 @@
 [ext_resource path="res://02test/test_scenes/list.gd" type="Script" id=8]
 [ext_resource path="res://Sprites/Gob.png" type="Texture" id=9]
 [ext_resource path="res://00U.I/arrows/Up.png" type="Texture" id=10]
+[ext_resource path="res://Assets/MinimalUI/MinimalUI.tres" type="Theme" id=11]
+[ext_resource path="res://Sprites/ColorTestWarmSm.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/NPCs/Bug.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Untitled 12.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Untitled 26.png" type="Texture" id=15]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -37,6 +42,7 @@ margin_top = -24.0
 margin_right = 89.5
 margin_bottom = 24.0
 hint_tooltip = "Select an item for it's description."
+theme = ExtResource( 11 )
 custom_styles/selected_focus = ExtResource( 3 )
 custom_styles/bg_focus = ExtResource( 3 )
 custom_styles/selected = ExtResource( 3 )
@@ -55,6 +61,9 @@ margin_top = 25.0
 margin_right = 217.0
 margin_bottom = 90.0
 custom_styles/panel = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Panel/Stat Panel"]
 margin_left = 11.0
@@ -122,10 +131,19 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
-margin_top = 4.0
 margin_right = -3.0
-margin_bottom = -26.0
+margin_bottom = -4.0
 texture = ExtResource( 9 )
+
+[node name="ItemList" type="ItemList" parent="Panel/Panel2"]
+margin_left = 2.0
+margin_top = 19.0
+margin_right = 38.0
+margin_bottom = 41.0
+theme = ExtResource( 11 )
+custom_styles/bg = ExtResource( 3 )
+items = [ "", ExtResource( 13 ), false, "", ExtResource( 12 ), false, "", ExtResource( 1 ), false, "", ExtResource( 15 ), false, "", ExtResource( 14 ), false ]
+fixed_icon_size = Vector2( 16, 16 )
 
 [node name="PanelContainer" type="PanelContainer" parent="Panel"]
 anchor_left = 0.5
@@ -194,6 +212,7 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="Panel/Tree"]
+visible = false
 margin_left = 6.0
 margin_top = 6.0
 margin_right = 18.0
@@ -205,6 +224,15 @@ margin_left = 20.0
 margin_top = 12.0
 margin_right = 60.0
 margin_bottom = 21.0
-text = "return"
+text = "Items"
+
+[node name="ItemList" type="ItemList" parent="Panel/Tree"]
+margin_left = 4.0
+margin_top = 23.0
+margin_right = 86.0
+margin_bottom = 62.0
+theme = ExtResource( 11 )
+custom_styles/bg = ExtResource( 3 )
+items = [ "Potion", null, false, "Goober", null, false, "Potion+", null, false, "Poison Oil", null, false, "Molten Cake", null, false, "Moodberry", null, false, "Potion", null, false, "Mushroom", null, false, "Book III", null, false, "Red Chalice", null, false, "Yoke", null, false ]
 
 [connection signal="item_activated" from="Panel/ItemList" to="." method="_on_ItemList_item_activated"]

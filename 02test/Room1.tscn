@@ -34,20 +34,14 @@ flip_h = true
 [node name="SaveCabG" parent="GameObjects/Save_Game" index="2"]
 flip_h = true
 
-[node name="Potion2" parent="GameObjects" index="1" instance=ExtResource( 5 )]
-position = Vector2( 89, 147 )
-
-[node name="Potion3" parent="GameObjects" index="2" instance=ExtResource( 5 )]
-position = Vector2( 83, 149 )
-
-[node name="Potion4" parent="GameObjects" index="3" instance=ExtResource( 5 )]
+[node name="Potion4" parent="GameObjects" index="1" instance=ExtResource( 5 )]
 position = Vector2( 74, 152 )
 
-[node name="DeBug" parent="GameObjects" index="4" instance=ExtResource( 9 )]
+[node name="DeBug" parent="GameObjects" index="2" instance=ExtResource( 9 )]
 position = Vector2( 61, 159 )
 NPCDialogue = "Hi there! This is the debug room! 
 ... I'm de bug (-w-) 
-Hehe, just kidding. Take some potions!"
+Hehe, just kidding. Here, take a potion!"
 
 [node name="Sprite" parent="GameObjects/DeBug" index="0"]
 texture = ExtResource( 6 )
@@ -59,7 +53,7 @@ shape = SubResource( 3 )
 [node name="CollisionShape2D" parent="GameObjects/DeBug/Area2D" index="0"]
 position = Vector2( 5, 2 )
 
-[node name="Kappa" type="StaticBody2D" parent="GameObjects" index="5"]
+[node name="Kappa" type="StaticBody2D" parent="GameObjects" index="3"]
 position = Vector2( 243, 66 )
 script = ExtResource( 8 )
 
@@ -75,15 +69,12 @@ shape = SubResource( 1 )
 position = Vector2( 0, 6 )
 shape = SubResource( 2 )
 
-[node name="Money" parent="GameObjects" index="6" instance=ExtResource( 10 )]
+[node name="Money" parent="GameObjects" index="4" instance=ExtResource( 10 )]
 position = Vector2( 128, 149 )
-
-[node name="Money2" parent="GameObjects" index="7" instance=ExtResource( 10 )]
-position = Vector2( 163, 158 )
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 3 )]
 position = Vector2( 156, 72 )
-destination_level = "res://02test/SpawnTest.tscn"
+destination_level = "res://02test/Room2.tscn"
 destination_spawn = "SpawnTestEnter"
 
 [node name="FromSpawnTest1" type="Position2D" parent="SpawnPoints" index="0"]

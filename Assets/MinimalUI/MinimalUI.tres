@@ -1,5 +1,6 @@
-[gd_resource type="Theme" load_steps=54 format=2]
+[gd_resource type="Theme" load_steps=55 format=2]
 
+[ext_resource path="res://Fonts/Nokia.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/MinimalUI/icons.svg" type="Texture" id=2]
 
 [sub_resource type="DynamicFontData" id=50]
@@ -36,6 +37,8 @@ border_width_left = 1
 border_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="DynamicFont" id=21]
+size = 6
+font_data = ExtResource( 1 )
 
 [sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 2 )
