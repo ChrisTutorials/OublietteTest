@@ -5,6 +5,8 @@ extends Node2D
 var hiscorpion = false
 var gavekey = false
 
+
+
 signal givekey
 
 export (String, MULTILINE) var AltText
@@ -14,6 +16,7 @@ export(Texture) var NPC_Texture = null
 var player_in_area
 
 func _ready():
+
 	pass
 
 func _on_Area2D_body_entered(body):

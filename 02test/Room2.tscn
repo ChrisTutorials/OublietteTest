@@ -1,8 +1,8 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Sounds/8bit_Sounds/Item5.wav" type="AudioStream" id=1]
 [ext_resource path="res://Sprites/NPCs/melon.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Backgrounds/Levels/Untitled 2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Backgrounds/Levels/Room2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/NPCs/Untitled 5.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Items/Fruits/Untitled 34.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Items/Fruits/Untitled 35.png" type="Texture" id=6]
@@ -23,6 +23,7 @@
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Script/Melon.gd" type="Script" id=22]
 [ext_resource path="res://Script/Monkey.gd" type="Script" id=23]
+[ext_resource path="res://Script/Room2GO.gd" type="Script" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.5, 4.5 )
@@ -48,12 +49,14 @@ __meta__ = {
 }
 
 [node name="ColorTestWarmSm" type="Sprite" parent="Background"]
+visible = false
 position = Vector2( -83, -15 )
 texture = ExtResource( 8 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 19 )]
 
 [node name="GameObjects" parent="." instance=ExtResource( 20 )]
+script = ExtResource( 24 )
 
 [node name="Save_Game" parent="GameObjects" instance=ExtResource( 16 )]
 position = Vector2( 245, 95 )
@@ -65,7 +68,7 @@ flip_h = true
 flip_h = true
 
 [node name="Scorpion" parent="GameObjects" instance=ExtResource( 18 )]
-position = Vector2( 174, 95 )
+position = Vector2( 101, 115 )
 
 [node name="CollisionShape2D" parent="GameObjects/Scorpion" index="1"]
 position = Vector2( 3, 8 )
@@ -73,7 +76,8 @@ position = Vector2( 3, 8 )
 [node name="Monkey" parent="GameObjects" instance=ExtResource( 21 )]
 position = Vector2( 223, 91 )
 script = ExtResource( 23 )
-AltText = "Thanks for playing with us! Here, take this!"
+AltText = "Thanks for playing with us! Here, take this key! 
+Kappa? No, he just wants to play! "
 NPCDialogue = "Ook ook! Could you talk to Scorpion for me?
 He keeps singing 'pio pio pio' all day ..."
 
@@ -94,7 +98,7 @@ stream = ExtResource( 1 )
 volume_db = -10.0
 
 [node name="WallOoze" parent="GameObjects" instance=ExtResource( 21 )]
-position = Vector2( 145, 103 )
+position = Vector2( 144, 100 )
 NPCDialogue = "Sticky, wet licorice fronds seep from betwixt the bricks ..."
 
 [node name="Sprite" parent="GameObjects/WallOoze" index="0"]
@@ -139,7 +143,7 @@ texture = ExtResource( 6 )
 
 [node name="Statue" parent="GameObjects" instance=ExtResource( 21 )]
 position = Vector2( 89, 27 )
-NPCDialogue = "The armor's empty gaze seeps into you from a slitted sallet. A faint glint in the darkness as you stare back, face-to-face ..."
+NPCDialogue = "The armor's empty gaze seeps into you from a slitted sallet. A faint glint in the darkness as you stare back, face-to-face ... with ... ?"
 
 [node name="Sprite" parent="GameObjects/Statue" index="0"]
 texture = null
@@ -196,17 +200,17 @@ position = Vector2( 112, 72 )
 position = Vector2( 95, 64 )
 
 [node name="Key" parent="GameObjects" instance=ExtResource( 15 )]
-position = Vector2( 210, 87 )
+position = Vector2( 227, 105 )
 
 [node name="Transitions" type="Node2D" parent="."]
 
 [node name="SpawnTestExit" parent="Transitions" instance=ExtResource( 14 )]
-position = Vector2( 152, 35 )
+position = Vector2( 156, 29 )
 destination_level = "res://02test/Room1.tscn"
 destination_spawn = "FromSpawnTest1"
 
 [node name="Move2TestRoom" parent="Transitions" instance=ExtResource( 14 )]
-position = Vector2( 3, 43 )
+position = Vector2( 3, 40 )
 destination_level = "res://02test/Room3.tscn"
 destination_spawn = "TestRoomEnter"
 
@@ -216,7 +220,7 @@ destination_spawn = "TestRoomEnter"
 position = Vector2( 237, 108 )
 
 [node name="SpawnTestEnter" type="Position2D" parent="SpawnPoints"]
-position = Vector2( 141, 48 )
+position = Vector2( 140, 46 )
 
 [node name="FromTestRoom" type="Position2D" parent="SpawnPoints"]
 position = Vector2( 15, 53 )
@@ -229,6 +233,7 @@ position = Vector2( -1, 0 )
 polygon = PoolVector2Array( 1, 57, 0, 0, 256, 0, 256, 103, 219, 95, 193, 64, 187, 57, 153, 48, 151, 21, 146, 23, 144, 27, 143, 33, 136, 37, 126, 42, 106, 36, 90, 33, 78.1178, 35.6875, 28, 50, 15, 46, 12, 37, 7, 40, 7, 56, 1, 61, 1, 66, 93, 94, 171, 67, 200.986, 99.4177, 202, 104, 199, 106, 168, 99, 95, 121, 86, 118, 91, 174, 100, 153, 125, 138, 175, 133, 214, 137, 238, 146, 256, 160, 256, 103, 256, 168, 256, 181, 255, 239, 0, 241, 0, 188, 8, 112, 12, 107, 36, 104, 0, 93 )
 
 [connection signal="himonkey" from="GameObjects/Scorpion" to="GameObjects/Monkey" method="_on_Scorpion_himonkey"]
+[connection signal="givekey" from="GameObjects/Monkey" to="GameObjects" method="_on_Monkey_givekey"]
 
 [editable path="GameObjects/Save_Game"]
 [editable path="GameObjects/Scorpion"]

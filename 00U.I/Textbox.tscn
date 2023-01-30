@@ -66,7 +66,7 @@ size_flags_vertical = 5
 custom_fonts/font = SubResource( 3 )
 
 [node name="Label" type="Label" parent="TextBoxContainer/MarginContainer/HBoxContainer"]
-margin_right = 207.0
+margin_right = 208.0
 margin_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 7

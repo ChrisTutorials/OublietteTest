@@ -14,6 +14,9 @@ func _ready():
 func _process(_delta):
 	if(player_in_area && Input.is_action_just_pressed("interact")):
 		_push_text()
+	if open == true:
+		$Sprite.hide()
+		$CollisionShape2D.disabled = true
 
 func _push_text():
 	if open == true:

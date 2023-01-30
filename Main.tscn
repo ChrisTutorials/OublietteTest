@@ -4,10 +4,10 @@
 [ext_resource path="res://Sprites/Splash.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Untitled 12.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Untitled 7.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Untitled 10.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Untitled 8 2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/NPCs/Untitled 10.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/NPCs/Untitled 8 2.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Untitled 8.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Pur 1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/NPCs/Pur 1.png" type="Texture" id=11]
 [ext_resource path="res://Sprites/Untitled 15.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxEmpty" id=3]

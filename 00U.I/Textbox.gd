@@ -14,6 +14,8 @@ enum State {
 	FINISHED
 }
 
+
+
 var current_state = State.READY
 var text_queue = []
 
@@ -37,6 +39,7 @@ func _process(_delta):
 			if Input.is_action_just_pressed("ui_accept"):
 				change_state(State.READY)
 				hide_textbox()
+
 
 func queue_text(next_text):
 	text_queue.push_back(next_text)
@@ -69,8 +72,8 @@ func change_state(next_state):
 	current_state = next_state
 	match current_state:
 		State.READY:
-			print("Changing state to: State.READY")
+			print("Text.State.READY")
 		State.READING:
-			print("Changing state to: State.READING")
+			print("Text.State.READING")
 		State.FINISHED:
-			print("Changing state to: State.FINISHED")
+			print("Text.State.FINISHED")
