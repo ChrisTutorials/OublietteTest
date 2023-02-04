@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://00U.I./pause_menu/PauseMenu.gd" type="Script" id=1]
-[ext_resource path="res://Sounds/8bit_Sounds/Hit4.wav" type="AudioStream" id=2]
+[ext_resource path="res://06Sounds/8bit_Sounds/Hit4.wav" type="AudioStream" id=2]
 [ext_resource path="res://Sprites/Items/BottleSprite.png" type="Texture" id=3]
 [ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=4]
 [ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=5]

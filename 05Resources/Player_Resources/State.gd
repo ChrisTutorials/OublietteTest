@@ -4,7 +4,7 @@ extends Node
 var playerlevel = 1
 var current_health = 10
 var max_heatlh = 10
-var damage = 3
+var damage = 2
 
 var maxcoins = 10 #havent used these yet
 var maxpotions = 5

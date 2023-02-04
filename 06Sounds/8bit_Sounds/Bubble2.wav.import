@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bubble2.wav-e6b15cc1daf19251ef30e0215c374474.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/Bubble2.wav"
+dest_files=[ "res://.import/Bubble2.wav-e6b15cc1daf19251ef30e0215c374474.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -5,7 +5,7 @@
 [ext_resource path="res://Sprites/dagger1.png" type="Texture" id=3]
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/DialoguePickup.gd" type="Script" id=5]
-[ext_resource path="res://Sounds/8bit_Sounds/Secret1.wav" type="AudioStream" id=6]
+[ext_resource path="res://06Sounds/8bit_Sounds/Secret1.wav" type="AudioStream" id=6]
 
 [node name="Room5" instance=ExtResource( 1 )]
 
@@ -39,7 +39,7 @@ visible = false
 disabled = true
 
 [node name="FromRoom3" type="Position2D" parent="SpawnPoints" index="0"]
-position = Vector2( 186, 123 )
+position = Vector2( 183, 127 )
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 visible = false

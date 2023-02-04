@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Raygun2.wav-5910919684ad82653c5019d8133170ea.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/Raygun2.wav"
+dest_files=[ "res://.import/Raygun2.wav-5910919684ad82653c5019d8133170ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

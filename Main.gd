@@ -9,6 +9,7 @@ func _ready():
 	$AnimationPlayer.play("SplashDown")
 	$Control/Start.hide()
 	$Control/Button.hide()
+	$Sprites.hide()
 
 func _on_Start_pressed():
 	GameManager.load_level(start_scene, start_location)
@@ -21,4 +22,5 @@ func _on_Button_pressed():
 func _on_AnimationPlayer_animation_finished(_SplashDown):
 	$Control/Start.show()
 	$Control/Button.show()
+	$Sprites.show()
 	$Control/Start.grab_focus()

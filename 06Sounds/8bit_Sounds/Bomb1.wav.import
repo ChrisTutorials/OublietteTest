@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bomb1.wav-11c56fc1420131996e16b2086947420e.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/Bomb1.wav"
+dest_files=[ "res://.import/Bomb1.wav-11c56fc1420131996e16b2086947420e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

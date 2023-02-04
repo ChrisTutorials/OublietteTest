@@ -76,6 +76,7 @@ OnScreenKeyboard="*res://00U.I./OnScreenKeyboard.tscn"
 Textbox="*res://00U.I./Textbox.tscn"
 SceneChanger="*res://00U.I./SceneChanger/SceneChanger.tscn"
 GDict="*res://Managers_Singletons/GDict.gd"
+Bgm="*res://06Sounds/BGM/BGM.tscn"
 
 [display]
 

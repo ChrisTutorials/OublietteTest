@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/BurnCrash.wav-6a120b99e65be16ae54c6af5c678fb8a.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/BurnCrash.wav"
+dest_files=[ "res://.import/BurnCrash.wav-6a120b99e65be16ae54c6af5c678fb8a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

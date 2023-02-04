@@ -1,6 +1,6 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://Sounds/8bit_Sounds/Item5.wav" type="AudioStream" id=1]
+[ext_resource path="res://06Sounds/8bit_Sounds/Item5.wav" type="AudioStream" id=1]
 [ext_resource path="res://Sprites/NPCs/melon.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room2.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/NPCs/Untitled 5.png" type="Texture" id=4]
@@ -74,7 +74,7 @@ position = Vector2( 101, 115 )
 position = Vector2( 3, 8 )
 
 [node name="Monkey" parent="GameObjects" instance=ExtResource( 21 )]
-position = Vector2( 223, 91 )
+position = Vector2( 236, 125 )
 script = ExtResource( 23 )
 AltText = "Thanks for playing with us! Here, take this key! 
 Kappa? No, he just wants to play! "
@@ -199,8 +199,20 @@ position = Vector2( 112, 72 )
 [node name="Money2" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 95, 64 )
 
+[node name="Money11" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 80, 72 )
+
+[node name="Money12" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 86, 79 )
+
+[node name="Money13" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 112, 72 )
+
+[node name="Money14" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 95, 64 )
+
 [node name="Key" parent="GameObjects" instance=ExtResource( 15 )]
-position = Vector2( 227, 105 )
+position = Vector2( 225, 104 )
 
 [node name="Transitions" type="Node2D" parent="."]
 

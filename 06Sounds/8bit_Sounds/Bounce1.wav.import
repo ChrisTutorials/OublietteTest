@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bounce1.wav-8ede0a3cc0062ed3f075f56fbf044485.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/Bounce1.wav"
+dest_files=[ "res://.import/Bounce1.wav-8ede0a3cc0062ed3f075f56fbf044485.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

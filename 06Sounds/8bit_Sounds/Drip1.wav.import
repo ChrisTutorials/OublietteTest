@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Drip1.wav-3c57d047b196dc29773ddd609edc2f90.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/Drip1.wav"
+dest_files=[ "res://.import/Drip1.wav-3c57d047b196dc29773ddd609edc2f90.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

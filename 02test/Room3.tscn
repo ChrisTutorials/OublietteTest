@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Sprites/NPCs/Pur 2.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Untitled 22 1.png" type="Texture" id=2]
-[ext_resource path="res://Sounds/8bit_Sounds/Twinkle1.wav" type="AudioStream" id=3]
-[ext_resource path="res://Sounds/8bit_Sounds/Bubble2.wav" type="AudioStream" id=4]
+[ext_resource path="res://06Sounds/8bit_Sounds/Twinkle1.wav" type="AudioStream" id=3]
+[ext_resource path="res://06Sounds/8bit_Sounds/Bubble2.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room3edit.png" type="Texture" id=5]
 [ext_resource path="res://01Prefabs/NPC/ComplexNPC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Triggers/area_move_level.tscn" type="PackedScene" id=7]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Swift5.wav-2c7fe5e23cecdc2e0e9bd65cf9cf32eb.sample"
+
+[deps]
+
+source_file="res://06Sounds/8bit_Sounds/Swift5.wav"
+dest_files=[ "res://.import/Swift5.wav-2c7fe5e23cecdc2e0e9bd65cf9cf32eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
