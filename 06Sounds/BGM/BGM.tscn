@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://06Sounds/BGM/Test1.mp3" type="AudioStream" id=1]
+[ext_resource path="res://06Sounds/BGM/8-Bit-Puzzler.mp3" type="AudioStream" id=1]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
 pause_mode = 2
