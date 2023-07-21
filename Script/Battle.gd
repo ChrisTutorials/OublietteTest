@@ -130,7 +130,8 @@ func _on_Fight_pressed():
 		$AnimationPlayer.play("exit_battle")
 		yield($AnimationPlayer, "animation_finished")
 		State.current_health = State.max_heatlh
-		GameManager.load_game()
+		#GameManager.load_game()
+		get_tree().change_scene_to(load('res://02test/Gachapon/Gatchapon.tscn'))
 	elif current_enemy_health > 0:
 		yield(get_tree().create_timer(0.5), "timeout")
 		enemy_turn()

@@ -3,7 +3,7 @@ extends KinematicBody2D
 class_name Player
 
 export(String) var player_name = "Player1"
-export (float) var speed = 50
+export (float) var speed = 25
 export(Resource) var inventory
 export(NodePath) onready var audio_player = get_node(audio_player)
 
@@ -12,6 +12,12 @@ func _ready():
 	load_state(GameManager.game_data.item_state)
 
 func _process(_delta):
+	
+	if Input.is_action_pressed("Run"):
+		speed = 50
+	if Input.is_action_just_released("Run"):
+		speed = 25
+
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("left"):
 		velocity.x -= 1.0

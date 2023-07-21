@@ -6,7 +6,7 @@
 [sub_resource type="DynamicFontData" id=50]
 
 [sub_resource type="DynamicFont" id=51]
-size = 12
+size = 6
 font_data = SubResource( 50 )
 
 [sub_resource type="StyleBoxFlat" id=52]

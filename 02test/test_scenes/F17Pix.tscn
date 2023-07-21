@@ -17,5 +17,13 @@ parameters/playback = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+limit_left = -243
+limit_top = -55
+limit_right = 347
+limit_bottom = 319
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [editable path="Player"]

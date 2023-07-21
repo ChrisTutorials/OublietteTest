@@ -109,7 +109,7 @@ disabled = true
 
 [node name="Fruits" parent="GameObjects" instance=ExtResource( 21 )]
 position = Vector2( 172, 143 )
-NPCDialogue = "The fruits sit together quietly around the bubbling cauldron. A sweet, warm flavor wafts from within it's swirling ooze ..."
+NPCDialogue = "The fruits sit together quietly around the bubbling cauldron. A sweet, warm flavor wafts from within it's swirling ooze ... the booboo fruit catches your eye."
 
 [node name="Sprite" parent="GameObjects/Fruits" index="0"]
 texture = null
@@ -155,9 +155,9 @@ position = Vector2( 0.5, 3.5 )
 position = Vector2( 1, 3 )
 
 [node name="Melon" parent="GameObjects" instance=ExtResource( 21 )]
-position = Vector2( 52, 42 )
+position = Vector2( 60, 42 )
 script = ExtResource( 22 )
-NPCDialogue = "I have laid out ten jade coins in tribute to The Black Knights ..."
+NPCDialogue = "I have laid out thirteen jade coins in tribute to The Black Knights ..."
 AltDialogue1 = "Hey! How did you get so many coins?
 ...
 Wait! No! 'A tithe is a tithe that binds in time!'"
@@ -169,47 +169,20 @@ hframes = 7
 [node name="CollisionShape2D" parent="GameObjects/Melon/Area2D" index="0"]
 shape = SubResource( 3 )
 
-[node name="Money" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 70, 75 )
-
-[node name="Money7" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 80, 72 )
-
-[node name="Money8" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 72, 68 )
-
-[node name="Money9" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 86, 79 )
-
-[node name="Money10" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 92, 71 )
+[node name="Money5" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 79, 50 )
 
 [node name="Money4" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 101, 76 )
-
-[node name="Money5" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 105, 66 )
-
-[node name="Money6" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 83, 65 )
+position = Vector2( 82, 60 )
 
 [node name="Money3" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 112, 72 )
+position = Vector2( 96, 63 )
 
 [node name="Money2" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 95, 64 )
+position = Vector2( 101, 53 )
 
 [node name="Money11" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 80, 72 )
-
-[node name="Money12" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 86, 79 )
-
-[node name="Money13" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 112, 72 )
-
-[node name="Money14" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 95, 64 )
+position = Vector2( 91, 45 )
 
 [node name="Key" parent="GameObjects" instance=ExtResource( 15 )]
 position = Vector2( 225, 104 )

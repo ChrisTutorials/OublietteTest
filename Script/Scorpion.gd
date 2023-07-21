@@ -4,7 +4,7 @@ var player_in_area
 var saidhi = false
 signal himonkey
 
-func _process(delta):
+func _process(_delta):
 	if(player_in_area && Input.is_action_just_pressed("interact")):
 		if saidhi == true:
 			Textbox.queue_text("Thanks for playing with me ~~ \nTell Monkey we had fun!")

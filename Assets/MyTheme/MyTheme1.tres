@@ -2,14 +2,17 @@
 
 [ext_resource path="res://Fonts/Nokia.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/MinimalUI/icons.svg" type="Texture" id=2]
+[ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=3]
 
-[sub_resource type="DynamicFontData" id=50]
+[sub_resource type="DynamicFontData" id=53]
+font_path = "res://Fonts/Nokia.ttf"
 
 [sub_resource type="DynamicFont" id=51]
-size = 12
-font_data = SubResource( 50 )
+size = 6
+font_data = SubResource( 53 )
 
 [sub_resource type="StyleBoxFlat" id=52]
+bg_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
@@ -19,14 +22,6 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color( 0, 0, 0, 1 )
-
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 1
@@ -34,10 +29,7 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color( 1, 1, 1, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_detail = 4
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 1 )
@@ -355,7 +347,7 @@ Button/constants/hseparation = 2
 Button/fonts/font = SubResource( 51 )
 Button/styles/disabled = SubResource( 52 )
 Button/styles/focus = SubResource( 2 )
-Button/styles/hover = SubResource( 3 )
+Button/styles/hover = ExtResource( 3 )
 Button/styles/normal = SubResource( 1 )
 Button/styles/pressed = SubResource( 4 )
 CheckBox/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )

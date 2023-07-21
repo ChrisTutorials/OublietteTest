@@ -4,7 +4,7 @@ extends EditorPlugin
 
 const SETTING_BASE_WIDTH := "display/window/integer_resolution_handler/base_width"
 const SETTING_BASE_HEIGHT := "display/window/integer_resolution_handler/base_height"
-const DEFAULT_BASE_WIDTH: int = 320
+const DEFAULT_BASE_WIDTH: int = 256
 const DEFAULT_BASE_HEIGHT: int = 240
 
 

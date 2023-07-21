@@ -1,15 +1,14 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Sprites/Items/BottleSprite.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Untitled 22 1.png" type="Texture" id=2]
 [ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=3]
-[ext_resource path="res://Sprites/Untitled 3.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Items/Money/Money1.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Items/Fruits/Untitled 35.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Barrel.png" type="Texture" id=7]
 [ext_resource path="res://02test/test_scenes/list.gd" type="Script" id=8]
 [ext_resource path="res://Sprites/Gob.png" type="Texture" id=9]
-[ext_resource path="res://00U.I/arrows/Up.png" type="Texture" id=10]
+[ext_resource path="res://00U.I./arrows/Up.png" type="Texture" id=10]
 [ext_resource path="res://Assets/MinimalUI/MinimalUI.tres" type="Theme" id=11]
 [ext_resource path="res://Sprites/ColorTestWarmSm.png" type="Texture" id=12]
 [ext_resource path="res://Sprites/NPCs/Bug.png" type="Texture" id=13]
@@ -22,9 +21,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 16 )
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
@@ -45,7 +41,7 @@ margin_bottom = 24.0
 hint_tooltip = "Select an item for it's description."
 theme = ExtResource( 16 )
 custom_styles/bg = ExtResource( 3 )
-items = [ "Potion", ExtResource( 1 ), false, "Orb", ExtResource( 2 ), false, "Key", ExtResource( 4 ), false, "Booboo", ExtResource( 6 ), false, "Coin", ExtResource( 5 ), false, "Barrel", ExtResource( 7 ), false ]
+items = [ "Potion", ExtResource( 1 ), false, "Orb", ExtResource( 2 ), false, "Key", null, false, "Booboo", ExtResource( 6 ), false, "Coin", ExtResource( 5 ), false, "Barrel", ExtResource( 7 ), false ]
 max_columns = 3
 same_column_width = true
 fixed_icon_size = Vector2( 16, 16 )
@@ -158,26 +154,26 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="Panel/PanelContainer"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 80.0
-margin_bottom = 65.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 81.0
+margin_bottom = 66.0
 custom_styles/panel = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VSeparator" type="VSeparator" parent="Panel/PanelContainer"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 80.0
-margin_bottom = 65.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 81.0
+margin_bottom = 66.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Panel/PanelContainer"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 80.0
-margin_bottom = 19.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 81.0
+margin_bottom = 16.0
 custom_styles/fg = ExtResource( 3 )
 custom_styles/bg = ExtResource( 3 )
 __meta__ = {
@@ -185,10 +181,10 @@ __meta__ = {
 }
 
 [node name="HSeparator" type="HSeparator" parent="Panel/PanelContainer"]
-margin_left = 2.0
-margin_top = 2.0
-margin_right = 80.0
-margin_bottom = 65.0
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 81.0
+margin_bottom = 66.0
 
 [node name="NinePatchRect" type="NinePatchRect" parent="Panel"]
 margin_left = 55.0

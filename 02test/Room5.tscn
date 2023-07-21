@@ -2,7 +2,7 @@
 
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room5.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/dagger1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Items/dagger1.png" type="Texture" id=3]
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/DialoguePickup.gd" type="Script" id=5]
 [ext_resource path="res://06Sounds/8bit_Sounds/Secret1.wav" type="AudioStream" id=6]
@@ -17,6 +17,7 @@ position = Vector2( 99, 126 )
 script = ExtResource( 5 )
 NPCDialogue = "The blood on this knife is fresh ...
 Better take it with."
+damage = 1
 
 [node name="Sprite" parent="GameObjects/Knife" index="0"]
 texture = ExtResource( 3 )
@@ -45,6 +46,13 @@ position = Vector2( 183, 127 )
 visible = false
 polygon = PoolVector2Array( 0, 65, 255, 65, 256, 240, 0, 240, 0, 170, 8, 165, 14, 225, 138, 224, 236, 165, 207, 118, 165, 119, 135, 137, 74, 137, 11, 164, 1, 165 )
 
+[node name="DialogueNPC" parent="." index="6" instance=ExtResource( 4 )]
+position = Vector2( 186, 110 )
+NPCDialogue = "Locked ..."
+
+[node name="Sprite" parent="DialogueNPC" index="0"]
+visible = false
+
 [editable path="Camera2D"]
 [editable path="GameObjects"]
 [editable path="GameObjects/Knife"]
@@ -52,3 +60,4 @@ polygon = PoolVector2Array( 0, 65, 255, 65, 256, 240, 0, 240, 0, 170, 8, 165, 14
 [editable path="Transitions"]
 [editable path="SpawnPoints"]
 [editable path="StaticBody2D"]
+[editable path="DialogueNPC"]

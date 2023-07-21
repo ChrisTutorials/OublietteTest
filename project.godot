@@ -76,7 +76,8 @@ OnScreenKeyboard="*res://00U.I./OnScreenKeyboard.tscn"
 Textbox="*res://00U.I./Textbox.tscn"
 SceneChanger="*res://00U.I./SceneChanger/SceneChanger.tscn"
 GDict="*res://Managers_Singletons/GDict.gd"
-Bgm="*res://06Sounds/BGM/BGM.tscn"
+Bgm="res://06Sounds/BGM/BGM.tscn"
+IntegerResolutionHandler="*res://addons/integer_resolution_handler/integer_resolution_handler.gd"
 
 [display]
 
@@ -89,12 +90,12 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/pixel_ever/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/integer_resolution_handler/plugin.cfg", "res://addons/pixel_ever/plugin.cfg" )
 
 [gui]
 
 theme/custom="res://Assets/MinimalUI/MinimalUI.tres"
-theme/custom_font="res://MainFont.tres"
+theme/custom_font="res://Nokia.tres"
 
 [importer_defaults]
 
@@ -174,6 +175,11 @@ ui_pause={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+Run={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777239,"unicode":0,"echo":false,"script":null)
  ]
 }
 

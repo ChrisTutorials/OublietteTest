@@ -24,3 +24,8 @@ func _on_AnimationPlayer_animation_finished(_SplashDown):
 	$Control/Button.show()
 	$Sprites.show()
 	$Control/Start.grab_focus()
+
+
+func _on_DEBUG_pressed():
+	get_tree().change_scene("res://02test/test_scenes/B17.tscn")
+	get_tree().paused = false

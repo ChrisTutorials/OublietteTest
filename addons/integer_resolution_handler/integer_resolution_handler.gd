@@ -7,7 +7,7 @@ extends Node
 const SETTING_BASE_WIDTH = "display/window/integer_resolution_handler/base_width"
 const SETTING_BASE_HEIGHT = "display/window/integer_resolution_handler/base_height"
 
-var base_resolution := Vector2(320, 240)
+var base_resolution := Vector2(256, 240)
 var stretch_mode: int
 var stretch_aspect: int
 onready var stretch_shrink: float = ProjectSettings.get_setting("display/window/stretch/shrink")
