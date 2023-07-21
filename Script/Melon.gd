@@ -11,6 +11,11 @@ func _process(_delta):
 	if(player_in_area && Input.is_action_just_pressed("interact")):
 		if State.coin_number >= 10:
 			Textbox.queue_text(AltDialogue1)
+			$AnimationPlayer.play("pentag")
+			yield($AnimationPlayer, "animation_finished")
+			$Sprite.visible = false
+			$CollisionShape2D.disabled = true
+			$Area2D.visible = false
 		else:
 			Textbox.queue_text(NPCDialogue)
 
