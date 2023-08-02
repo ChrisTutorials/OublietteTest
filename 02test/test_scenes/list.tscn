@@ -22,14 +22,13 @@ anchor_bottom = 1.0
 theme = ExtResource( 16 )
 script = ExtResource( 8 )
 
-[node name="Panel" type="Panel" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ItemList" type="ItemList" parent="Panel"]
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -45,11 +44,8 @@ items = [ "Potion", ExtResource( 1 ), false, "Orb", ExtResource( 2 ), false, "Ke
 max_columns = 3
 same_column_width = true
 fixed_icon_size = Vector2( 16, 16 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Stat Panel" type="Panel" parent="Panel"]
+[node name="StatPanel" type="Panel" parent="CanvasLayer/Panel"]
 margin_left = 86.0
 margin_top = 25.0
 margin_right = 217.0
@@ -59,69 +55,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Stat Panel"]
-margin_left = 11.0
-margin_top = 11.0
-margin_right = 27.0
-margin_bottom = 52.0
-text = "str
-con
-dex
-int"
-scroll_active = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Panel/Stat Panel"]
-margin_left = 38.0
-margin_top = 11.0
-margin_right = 57.0
-margin_bottom = 40.0
-text = "wis
-cha
-luck
-"
-scroll_active = false
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="Panel/Stat Panel"]
-margin_left = 73.0
-margin_top = 30.0
-margin_right = 86.0
-margin_bottom = 50.0
-text = "ac
-ev
-"
-scroll_active = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Panel/Stat Panel"]
-margin_left = 74.0
-margin_top = 11.0
-margin_right = 87.0
-margin_bottom = 20.0
-text = "xp."
-
-[node name="Label2" type="Label" parent="Panel/Stat Panel"]
-margin_left = 87.0
-margin_top = 11.0
-margin_right = 127.0
-margin_bottom = 20.0
+[node name="Label2" type="Label" parent="CanvasLayer/Panel/StatPanel"]
+margin_left = 77.0
+margin_top = 9.0
+margin_right = 122.0
+margin_bottom = 22.0
 text = "691/700"
 
-[node name="Panel2" type="Panel" parent="Panel"]
+[node name="Label" type="Label" parent="CanvasLayer/Panel/StatPanel"]
+margin_left = 57.0
+margin_top = 9.0
+margin_right = 75.0
+margin_bottom = 22.0
+text = "xp."
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/StatPanel"]
+margin_left = 7.0
+margin_top = 41.0
+margin_right = 47.0
+margin_bottom = 55.0
+theme = ExtResource( 16 )
+text = "SaveTest"
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/Panel"]
 margin_left = 40.0
 margin_top = 25.0
 margin_right = 80.0
 margin_bottom = 90.0
 custom_styles/panel = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="TextureRect" type="TextureRect" parent="Panel/Panel2"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel/Panel2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -129,7 +92,7 @@ margin_right = -3.0
 margin_bottom = -4.0
 texture = ExtResource( 9 )
 
-[node name="ItemList" type="ItemList" parent="Panel/Panel2"]
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Panel/Panel2"]
 margin_left = 2.0
 margin_top = 19.0
 margin_right = 38.0
@@ -139,7 +102,7 @@ custom_styles/bg = ExtResource( 3 )
 items = [ "", ExtResource( 13 ), false, "", ExtResource( 12 ), false, "", ExtResource( 1 ), false, "", ExtResource( 15 ), false, "", ExtResource( 14 ), false ]
 fixed_icon_size = Vector2( 16, 16 )
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel"]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -153,7 +116,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="Panel/PanelContainer"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Panel/PanelContainer"]
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 81.0
@@ -163,30 +126,30 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VSeparator" type="VSeparator" parent="Panel/PanelContainer"]
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/Panel/PanelContainer"]
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 81.0
 margin_bottom = 66.0
 
-[node name="ProgressBar" type="ProgressBar" parent="Panel/PanelContainer"]
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/Panel/PanelContainer"]
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 81.0
-margin_bottom = 16.0
+margin_bottom = 11.0
 custom_styles/fg = ExtResource( 3 )
 custom_styles/bg = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HSeparator" type="HSeparator" parent="Panel/PanelContainer"]
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Panel/PanelContainer"]
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 81.0
 margin_bottom = 66.0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Panel"]
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Panel"]
 margin_left = 55.0
 margin_top = 170.0
 margin_right = 103.0
@@ -194,39 +157,36 @@ margin_bottom = 204.0
 texture = ExtResource( 10 )
 patch_margin_left = 48
 
-[node name="Tree" type="Tree" parent="Panel"]
+[node name="Tree" type="Tree" parent="CanvasLayer/Panel"]
 margin_left = 127.0
 margin_top = 150.0
 margin_right = 217.0
 margin_bottom = 218.0
 custom_styles/bg = ExtResource( 3 )
 hide_root = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Button" type="Button" parent="Panel/Tree"]
-visible = false
+[node name="Button" type="Button" parent="CanvasLayer/Panel/Tree"]
 margin_left = 6.0
 margin_top = 6.0
 margin_right = 18.0
 margin_bottom = 21.0
 custom_styles/normal = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="Panel/Tree"]
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Tree"]
 margin_left = 20.0
 margin_top = 12.0
 margin_right = 60.0
 margin_bottom = 21.0
-text = "Items"
+text = "Prizes"
 
-[node name="ItemList" type="ItemList" parent="Panel/Tree"]
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Panel/Tree"]
 margin_left = 4.0
-margin_top = 23.0
+margin_top = 24.0
 margin_right = 86.0
-margin_bottom = 62.0
+margin_bottom = 63.0
 theme = ExtResource( 11 )
 custom_styles/bg = ExtResource( 3 )
-items = [ "Potion", null, false, "Goober", null, false, "Potion+", null, false, "Poison Oil", null, false, "Molten Cake", null, false, "Moodberry", null, false, "Potion", null, false, "Mushroom", null, false, "Book III", null, false, "Red Chalice", null, false, "Yoke", null, false ]
+items = [ "Potion", null, false, "Goober", null, false, "Dias", null, false, "Poison Oil", null, false, "Molten Cake", null, false, "Moodberry", null, false, "Potion", null, false, "Mushroom", null, false, "Book III", null, false, "Red Chalice", null, false, "Yoke", null, false ]
 
-[connection signal="item_activated" from="Panel/ItemList" to="." method="_on_ItemList_item_activated"]
+[connection signal="item_activated" from="CanvasLayer/Panel/ItemList" to="." method="_on_ItemList_item_activated"]
+[connection signal="pressed" from="CanvasLayer/Panel/StatPanel/Button" to="." method="_on_Button_pressed"]

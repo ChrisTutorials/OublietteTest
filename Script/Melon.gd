@@ -15,7 +15,11 @@ func _process(_delta):
 			yield($AnimationPlayer, "animation_finished")
 			$Sprite.visible = false
 			$CollisionShape2D.disabled = true
-			$Area2D.visible = false
+			$MelonSound.play()
+			yield($MelonSound, "finished")
+			$Area2D/CollisionShape2D.disabled = true
+
+
 		else:
 			Textbox.queue_text(NPCDialogue)
 

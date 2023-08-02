@@ -1,12 +1,15 @@
 extends StaticBody2D
 
 var player_in_area
+var dialog = ConfirmationDialog.new()
 
 func _ready():
 	pass
 
 func _process(_delta):
 	if(player_in_area && Input.is_action_just_pressed("interact")):
+		
+
 		GameManager.TestBattle()
 
 func _on_Area2D_body_entered(body):

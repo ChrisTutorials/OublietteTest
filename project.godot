@@ -71,13 +71,15 @@ config/icon="res://Sprites/Items/BottleSprite.png"
 GameManager="*res://Managers_Singletons/GameManager.tscn"
 State="*res://05Resources/Player_Resources/State.gd"
 Helpers="*res://Script/Helpers.gd"
+List="*res://02test/test_scenes/list.tscn"
 PauseMenu="*res://00U.I./pause_menu/PauseMenu.tscn"
 OnScreenKeyboard="*res://00U.I./OnScreenKeyboard.tscn"
 Textbox="*res://00U.I./Textbox.tscn"
 SceneChanger="*res://00U.I./SceneChanger/SceneChanger.tscn"
 GDict="*res://Managers_Singletons/GDict.gd"
-Bgm="res://06Sounds/BGM/BGM.tscn"
+Bgm="*res://06Sounds/BGM/BGM.tscn"
 IntegerResolutionHandler="*res://addons/integer_resolution_handler/integer_resolution_handler.gd"
+SaveTest="*res://SaveTest.gd"
 
 [display]
 
@@ -180,6 +182,11 @@ ui_pause={
 Run={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777239,"unicode":0,"echo":false,"script":null)
+ ]
+}
+List={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":88,"unicode":0,"echo":false,"script":null)
  ]
 }
 

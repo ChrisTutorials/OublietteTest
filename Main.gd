@@ -27,5 +27,5 @@ func _on_AnimationPlayer_animation_finished(_SplashDown):
 
 
 func _on_DEBUG_pressed():
-	get_tree().change_scene("res://02test/test_scenes/B17.tscn")
+	get_tree().change_scene("res://02test/test_scenes/F17Pix.tscn")
 	get_tree().paused = false

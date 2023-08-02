@@ -46,13 +46,11 @@ pitch_scale = 0.59
 position = Vector2( 29, 149 )
 
 [node name="DirtDevil" parent="GameObjects" index="2" instance=ExtResource( 11 )]
-position = Vector2( 99, 130 )
-NPCDialogue = "Dirt Devil: 
-The door? Obviously they all know where their key is, but they never want to say ..."
+position = Vector2( 200, 190 )
+NPCDialogue = "I'm here with the excavation team, but I got lost. I'm deliveirng these barrels of goop to my troupe. Have you heard of us?"
 
 [node name="Sprite" parent="GameObjects/DirtDevil" index="0"]
 texture = ExtResource( 14 )
-flip_h = true
 
 [node name="Money" parent="GameObjects" index="3" instance=ExtResource( 9 )]
 position = Vector2( 94, 191 )
@@ -72,8 +70,9 @@ texture = ExtResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="ComplexNPC" parent="GameObjects" index="6" instance=ExtResource( 6 )]
-position = Vector2( 209, 188 )
-NPCDialogue = "*bonk*"
+position = Vector2( 214, 187 )
+NPCDialogue = "*bonk* ...
+The front of the barrel says, \"Blue House Paint & Pancake Batter\"."
 
 [node name="Sound" parent="GameObjects/ComplexNPC" index="3"]
 pause_mode = 2

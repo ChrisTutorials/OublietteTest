@@ -2,23 +2,22 @@ extends Node
 #global player display / stat states.gd #autoload
 
 var playerlevel = 1
-export var xp = 0
+
 var current_health = 10
 var max_heatlh = 10
+
 var damage = 2
 
-var maxcoins = 10 #havent used these yet
-var maxpotions = 5
-var maxkeys = 1
+var StatePrizes = []
 
+var coin_number = 0
+var potion_number = 0
+var keys = 0
 
-export (int) var coin_number = 0
-export (int) var potion_number = 0
-export (int) var keys = 0
+#var maxcoins = 10 #havent used these yet
+#var maxpotions = 5
+#var maxkeys = 1
 
-func _ready():
-	pass
+#export var xp = 0
 
-func _process(_delta): #need to link state with inventory
-	pass
 

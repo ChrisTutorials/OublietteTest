@@ -1,8 +1,27 @@
 extends Control
 
+var collectedPrizes = State.StatePrizes
 
 func _ready():
-	pass
+	$CanvasLayer.hide()
+	$CanvasLayer/Panel/Tree/ItemList.clear()
+	
+func _input(_event):
+	if Input.is_action_pressed("List"):
+		if $CanvasLayer.visible == false:
+			$CanvasLayer.show()
+	else:
+		$CanvasLayer.hide()
+
+func _process(delta):
+
+	updateList()
+
+func updateList():
+	$CanvasLayer/Panel/Tree/ItemList.clear()
+	for prize in collectedPrizes:
+		$CanvasLayer/Panel/Tree/ItemList.add_item(prize)
+
 
 
 func _on_ItemList_item_activated(index):
@@ -19,3 +38,7 @@ func _on_ItemList_item_activated(index):
 	if index == 5:
 		Textbox.queue_text("It seems kind of silly to carry around a barrel, but this one has a nice blue paint job!")
 
+
+
+func _on_Button_pressed():
+	$CanvasLayer/Panel/StatPanel/Label2.text = String(SaveTest.player_health)
