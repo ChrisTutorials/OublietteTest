@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Sprites/Items/BottleSprite.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Untitled 22 1.png" type="Texture" id=2]
 [ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=3]
-[ext_resource path="res://Sprites/Items/Money/Money1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Items/Key.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Items/Fruits/Untitled 35.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Barrel.png" type="Texture" id=7]
 [ext_resource path="res://02test/test_scenes/list.gd" type="Script" id=8]
@@ -27,6 +28,7 @@ script = ExtResource( 8 )
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 16 )
 
 [node name="ItemList" type="ItemList" parent="CanvasLayer/Panel"]
 anchor_left = 0.5
@@ -40,7 +42,7 @@ margin_bottom = 24.0
 hint_tooltip = "Select an item for it's description."
 theme = ExtResource( 16 )
 custom_styles/bg = ExtResource( 3 )
-items = [ "Potion", ExtResource( 1 ), false, "Orb", ExtResource( 2 ), false, "Key", null, false, "Booboo", ExtResource( 6 ), false, "Coin", ExtResource( 5 ), false, "Barrel", ExtResource( 7 ), false ]
+items = [ "Potion", ExtResource( 1 ), false, "Orb", ExtResource( 2 ), false, "Key", ExtResource( 4 ), false, "Booboo", ExtResource( 6 ), false, "Coin", ExtResource( 5 ), false, "Barrel", ExtResource( 7 ), false ]
 max_columns = 3
 same_column_width = true
 fixed_icon_size = Vector2( 16, 16 )
@@ -136,7 +138,7 @@ margin_bottom = 66.0
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 81.0
-margin_bottom = 11.0
+margin_bottom = 16.0
 custom_styles/fg = ExtResource( 3 )
 custom_styles/bg = ExtResource( 3 )
 __meta__ = {

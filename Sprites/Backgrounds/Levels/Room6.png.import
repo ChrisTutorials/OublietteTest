@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Untitled 18.png-391cfc6d7985a05bb2e31fdbcb49cf93.stex"
+path="res://.import/Room6.png-54f3cbd5437030fec64c3ddcb72b52c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Untitled 18.png"
-dest_files=[ "res://.import/Untitled 18.png-391cfc6d7985a05bb2e31fdbcb49cf93.stex" ]
+source_file="res://Sprites/Backgrounds/Levels/Room6.png"
+dest_files=[ "res://.import/Room6.png-54f3cbd5437030fec64c3ddcb72b52c4.stex" ]
 
 [params]
 

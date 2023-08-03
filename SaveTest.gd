@@ -5,12 +5,14 @@ extends Node
 
 var player_level = 1
 var player_health = 100
+var globs = 0
 
 
-func save_data():
+func save_testdata():
 	var data = {
 		"level": player_level,
 		"health": player_health,
+		"globs": globs,
 	}
 	var file = File.new()
 	if file.open("user://player_data.dat", File.WRITE) == OK:
@@ -18,7 +20,7 @@ func save_data():
 		file.store_string(serialized_data)
 		file.close()
 
-func load_data():
+func load_testdata():
 	var file = File.new()
 	if file.open("user://player_data.dat", File.READ) == OK:
 		var serialized_data = file.get_as_text()

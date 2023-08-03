@@ -1,26 +1,48 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Unused/Room7.png" type="Texture" id=2]
-[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Triggers/area_move_level.tscn" type="PackedScene" id=3]
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Script/DialogueNPC.gd" type="Script" id=5]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 12.0
 
 [node name="Room7" instance=ExtResource( 4 )]
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 
-[node name="Player" parent="GameObjects" index="0" instance=ExtResource( 3 )]
-
-[node name="DialogueNPC" parent="GameObjects" index="1" instance=ExtResource( 1 )]
+[node name="IronBars" parent="GameObjects" index="0" instance=ExtResource( 1 )]
 position = Vector2( 50, 102 )
 NPCDialogue = "No use ... the bars are thick iron."
 
-[node name="Sprite" parent="GameObjects/DialogueNPC" index="0"]
+[node name="Sprite" parent="GameObjects/IronBars" index="0"]
 texture = null
+
+[node name="PortalScratch" type="StaticBody2D" parent="GameObjects" index="1"]
+position = Vector2( 77, 145 )
+script = ExtResource( 5 )
+NPCDialogue = "The glyph has been scratched away ... "
+
+[node name="Sprite" type="Sprite" parent="GameObjects/PortalScratch" index="0"]
+
+[node name="Area2D" type="Area2D" parent="GameObjects/PortalScratch" index="1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GameObjects/PortalScratch/Area2D" index="0"]
+shape = SubResource( 2 )
+
+[node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 3 )]
+position = Vector2( 229, 98 )
+destination_level = "res://02test/Room8.tscn"
+destination_spawn = "FromRoom7"
 
 [node name="kappa_win" type="Position2D" parent="SpawnPoints" index="0"]
 position = Vector2( 78, 143 )
+
+[node name="FromRoom8" type="Position2D" parent="SpawnPoints" index="1"]
+position = Vector2( 204, 108 )
 
 [node name="StaticBody2D" parent="." index="5"]
 visible = false
@@ -28,9 +50,12 @@ visible = false
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 polygon = PoolVector2Array( 0, 204, 256, 203, 255, 0, 1, 40, 0, 136, 14, 115, 31, 112, 35, 84, 68, 105, 85, 103, 137, 120, 179, 110, 228, 99, 232, 110, 198, 121, 200, 124, 254, 131, 254, 141, 241, 152, 222, 145, 174, 165, 136, 150, 91, 167, 25, 155, 39, 130, 16, 117, 1, 136 )
 
+[connection signal="body_entered" from="GameObjects/PortalScratch/Area2D" to="GameObjects/PortalScratch" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="GameObjects/PortalScratch/Area2D" to="GameObjects/PortalScratch" method="_on_Area2D_body_exited"]
+
 [editable path="Camera2D"]
 [editable path="GameObjects"]
-[editable path="GameObjects/DialogueNPC"]
+[editable path="GameObjects/IronBars"]
 [editable path="Transitions"]
 [editable path="SpawnPoints"]
 [editable path="StaticBody2D"]

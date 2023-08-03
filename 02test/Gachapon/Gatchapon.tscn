@@ -16,7 +16,7 @@ bg_color = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-destination_level = "res://02test/Room6.tscn"
+destination_level = "res://02test/Room7.tscn"
 destination_spawn = "kappa_win"
 
 [node name="background panel" type="Panel" parent="."]

@@ -14,11 +14,16 @@ position = Vector2( -12, 160 )
 destination_level = "res://02test/Room4.tscn"
 destination_spawn = "fromRoom4b"
 
+[node name="trigger_move_level2" parent="Transitions" index="1" instance=ExtResource( 3 )]
+position = Vector2( 16, 182 )
+destination_level = "res://02test/Room6.tscn"
+destination_spawn = "FromRoom4B"
+
 [node name="fromRoom4a" type="Position2D" parent="SpawnPoints" index="0"]
 position = Vector2( 6, 151 )
 
-[node name="load_position" type="Position2D" parent="SpawnPoints" index="1"]
-position = Vector2( 129, 188 )
+[node name="FromRoom6" type="Position2D" parent="SpawnPoints" index="1"]
+position = Vector2( 34, 191 )
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 visible = false
