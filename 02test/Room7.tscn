@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Sprites/Unused/Room7.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Backgrounds/Levels/Room7.png" type="Texture" id=2]
 [ext_resource path="res://Triggers/area_move_level.tscn" type="PackedScene" id=3]
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/DialogueNPC.gd" type="Script" id=5]

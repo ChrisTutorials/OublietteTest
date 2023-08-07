@@ -154,7 +154,7 @@ texture = ExtResource( 5 )
 pause_mode = 2
 position = Vector2( 159, 78 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="bioworm1" type="Sprite" parent="GameObjects" index="4"]

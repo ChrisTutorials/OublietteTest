@@ -4,7 +4,7 @@ var collectedPrizes = State.StatePrizes
 
 func _ready():
 	$CanvasLayer.hide()
-	$CanvasLayer/Panel/Tree/ItemList.clear()
+	$CanvasLayer/Panel/Tree/TreasureList.clear()
 	
 func _input(_event):
 	if Input.is_action_pressed("List"):
@@ -18,10 +18,9 @@ func _process(delta):
 	updateList()
 
 func updateList():
-	$CanvasLayer/Panel/Tree/ItemList.clear()
+	$CanvasLayer/Panel/Tree/TreasureList.clear()
 	for prize in collectedPrizes:
-		$CanvasLayer/Panel/Tree/ItemList.add_item(prize)
-
+		$CanvasLayer/Panel/Tree/TreasureList.add_item(prize)
 
 
 func _on_ItemList_item_activated(index):
@@ -39,6 +38,9 @@ func _on_ItemList_item_activated(index):
 		Textbox.queue_text("It seems kind of silly to carry around a barrel, but this one has a nice blue paint job!")
 
 
-
 func _on_Button_pressed():
 	$CanvasLayer/Panel/StatPanel/Label2.text = String(SaveTest.player_health)
+
+
+func _on_TreasureList_item_activated(index):
+	pass

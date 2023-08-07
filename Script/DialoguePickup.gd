@@ -7,4 +7,5 @@ func _physics_process(delta):
 		State.damage += damage
 		$Sound.play()
 		yield($Sound, "finished")
+		State.StatePrizes.append("Knife")
 		queue_free()
