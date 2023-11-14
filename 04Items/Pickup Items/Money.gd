@@ -8,3 +8,4 @@ func _pickup(player : Player):
 	player.inventory.Money += amount
 	print("Money held: ", player.inventory.Money)
 	self.enabled = false
+

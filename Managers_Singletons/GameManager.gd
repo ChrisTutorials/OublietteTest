@@ -25,6 +25,7 @@ func load_game():
 			print("Save Data found! " + FULL_FILE_PATH)
 			game_data = load_game_data
 			#Load Level
+
 			load_level(game_data.current_level, game_data.load_position)
 		else:
 			print_debug("No Save Data found!")

@@ -12,6 +12,8 @@ var camera_target : RemoteTransform2D
 var save_objs
 
 func _ready():
+
+	
 	#spawn_player(GameManager.player, GameManager.spawn_loc) old
 	save_objs = get_tree().get_nodes_in_group(GDict.saveable_objects_group)
 
