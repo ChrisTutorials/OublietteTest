@@ -86,7 +86,7 @@ position = Vector2( 104, 151 )
 [node name="player_start" type="Position2D" parent="SpawnPoints" index="2"]
 position = Vector2( 109, 158 )
 
-[node name="kappa_win" type="Position2D" parent="SpawnPoints" index="3"]
+[node name="kappa_exit" type="Position2D" parent="SpawnPoints" index="3"]
 position = Vector2( 226, 81 )
 
 [node name="StaticBody2D" parent="." index="5"]

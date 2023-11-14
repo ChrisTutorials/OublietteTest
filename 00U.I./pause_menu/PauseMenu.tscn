@@ -42,9 +42,6 @@ margin_left = -112.0
 margin_top = -108.0
 margin_right = 113.0
 margin_bottom = -45.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Panel" parent="ItemPanel"]
 anchor_right = 1.0
@@ -96,9 +93,6 @@ texture = ExtResource( 7 )
 [node name="JournalPanel" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="JournalBackPanel" type="Panel" parent="JournalPanel"]
 anchor_left = 0.5

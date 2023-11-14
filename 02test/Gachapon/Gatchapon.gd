@@ -60,7 +60,7 @@ func _on_Exit_pressed():
 	SceneChanger.scenefade()
 	#GameManager.load_game()
 	GameManager.load_level(destination_level, destination_spawn)
-	Textbox.queue_text("Thanks For Playing!")
+	Textbox.queue_text("Press X to view treasures!")
 
 
 func _on_ItemList_item_activated(index):

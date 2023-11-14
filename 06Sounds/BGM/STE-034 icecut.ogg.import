@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/STE-034 icecut.ogg-5451d1207434a8c715871f302b8e3299.oggstr"
+
+[deps]
+
+source_file="res://06Sounds/BGM/STE-034 icecut.ogg"
+dest_files=[ "res://.import/STE-034 icecut.ogg-5451d1207434a8c715871f302b8e3299.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

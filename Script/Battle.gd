@@ -8,6 +8,9 @@ var current_enemy_health = 0
 var defend = false
 signal kappawin
 
+export(String, FILE) var destination_level
+export(String) var destination_spawn
+
 func _ready():
 	set_health($EnemyContainer/ProgressBar,enemy.hp,enemy.hp)
 	set_health($ActionsPanel/PlayerData/ProgressBar, State.current_health, State.max_heatlh)
@@ -87,7 +90,7 @@ func _on_Exit_pressed():
 	$AnimationPlayer.play("exit_battle")
 	yield($AnimationPlayer, "animation_finished")
 	State.current_health = State.max_heatlh
-	GameManager.load_game()
+	GameManager.load_level(destination_level, destination_spawn)
 
 func _PotionUse():
 	if State.potion_number >= 1:
@@ -121,6 +124,8 @@ func _on_Fight_pressed():
 	display_text("%d damage!" % State.damage)
 	yield(self, "textbox_closed")
 	if current_enemy_health == 0:
+		display_text("%s: %s" % [enemy.name, enemy.death])
+		yield(self, "textbox_closed")
 		display_text("%s Dies!" % enemy.name)
 		yield(self, "textbox_closed")
 		$AnimationPlayer.play("enemy_damaged")

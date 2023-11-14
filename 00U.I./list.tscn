@@ -1,0 +1,144 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Sprites/Items/BottleSprite.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Untitled 22 1.png" type="Texture" id=2]
+[ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=3]
+[ext_resource path="res://Sprites/Items/Key.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Items/Fruits/Untitled 35.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Barrel.png" type="Texture" id=7]
+[ext_resource path="res://02test/test_scenes/list.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/Gob.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/ColorTestWarmSm.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/NPCs/Bug.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Untitled 12.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Untitled 26.png" type="Texture" id=13]
+[ext_resource path="res://Assets/MyTheme/MyTheme1.tres" type="Theme" id=14]
+[ext_resource path="res://Assets/MinimalUI/MinimalUI.tres" type="Theme" id=15]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 14 )
+script = ExtResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 14 )
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.5
+margin_top = -24.0
+margin_right = 89.5
+margin_bottom = 24.0
+hint_tooltip = "Select an item for it's description."
+theme = ExtResource( 14 )
+custom_styles/bg = ExtResource( 3 )
+items = [ "Potion", ExtResource( 1 ), false, "Orb", ExtResource( 2 ), false, "Key", ExtResource( 4 ), false, "Booboo", ExtResource( 6 ), false, "Coin", ExtResource( 5 ), false, "Barrel", ExtResource( 7 ), false ]
+max_columns = 3
+same_column_width = true
+fixed_icon_size = Vector2( 16, 16 )
+
+[node name="StatPanel" type="Panel" parent="CanvasLayer/Panel"]
+margin_left = 112.0
+margin_top = 25.0
+margin_right = 217.0
+margin_bottom = 90.0
+custom_styles/panel = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel/StatPanel"]
+margin_left = 27.0
+margin_top = 9.0
+margin_right = 72.0
+margin_bottom = 22.0
+text = "0"
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/StatPanel"]
+margin_left = 7.0
+margin_top = 9.0
+margin_right = 25.0
+margin_bottom = 22.0
+text = "xp."
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/StatPanel"]
+margin_left = 7.0
+margin_top = 41.0
+margin_right = 47.0
+margin_bottom = 55.0
+theme = ExtResource( 14 )
+text = "reset"
+
+[node name="Beastiary" type="Panel" parent="CanvasLayer/Panel"]
+margin_left = 40.0
+margin_top = 25.0
+margin_right = 110.0
+margin_bottom = 90.0
+custom_styles/panel = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel/Beastiary"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -3.0
+margin_bottom = -4.0
+texture = ExtResource( 9 )
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Panel/Beastiary"]
+margin_left = 3.0
+margin_top = 20.0
+margin_right = 66.0
+margin_bottom = 62.0
+theme = ExtResource( 15 )
+custom_styles/bg = SubResource( 1 )
+items = [ "DeBug", ExtResource( 11 ), false, "Egg", ExtResource( 10 ), false, "Potion", ExtResource( 1 ), false, "?", ExtResource( 13 ), false, "?", ExtResource( 12 ), false ]
+fixed_icon_size = Vector2( 16, 16 )
+
+[node name="Tree" type="Tree" parent="CanvasLayer/Panel"]
+margin_left = 39.0
+margin_top = 150.0
+margin_right = 217.0
+margin_bottom = 218.0
+custom_styles/bg = ExtResource( 3 )
+columns = 2
+column_titles_visible = true
+hide_root = true
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/Tree"]
+margin_left = 158.0
+margin_top = 7.0
+margin_right = 170.0
+margin_bottom = 17.0
+custom_styles/normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Tree"]
+margin_left = 5.0
+margin_top = 9.0
+margin_right = 45.0
+margin_bottom = 22.0
+text = "Treasure & Prizes"
+
+[node name="TreasureList" type="ItemList" parent="CanvasLayer/Panel/Tree"]
+margin_left = 4.0
+margin_top = 24.0
+margin_right = 100.0
+margin_bottom = 63.0
+theme = ExtResource( 15 )
+custom_styles/bg = ExtResource( 3 )
+items = [ "Potion", null, false, "Goober", null, false, "Dias", null, false, "Poison Oil", null, false, "Molten Cake", null, false, "Moodberry", null, false, "Potion", null, false, "Mushroom", null, false, "Book III", null, false, "Red Chalice", null, false, "Yoke", null, false ]
+
+[connection signal="item_activated" from="CanvasLayer/Panel/ItemList" to="." method="_on_ItemList_item_activated"]
+[connection signal="pressed" from="CanvasLayer/Panel/StatPanel/Button" to="." method="_on_Button_pressed"]
+[connection signal="item_activated" from="CanvasLayer/Panel/Tree/TreasureList" to="." method="_on_TreasureList_item_activated"]

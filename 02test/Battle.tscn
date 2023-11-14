@@ -143,6 +143,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
 enemy = ExtResource( 6 )
+destination_level = "res://02test/Room1.tscn"
+destination_spawn = "kappa_exit"
 
 [node name="Shaders" parent="." instance=ExtResource( 12 )]
 
@@ -170,9 +172,6 @@ margin_right = 44.0
 margin_bottom = 163.0
 texture = SubResource( 3 )
 flip_h = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="EnemyContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
