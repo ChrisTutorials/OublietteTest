@@ -79,7 +79,6 @@ SceneChanger="*res://00U.I./SceneChanger/SceneChanger.tscn"
 GDict="*res://Managers_Singletons/GDict.gd"
 Bgm="*res://06Sounds/BGM/BGM.tscn"
 IntegerResolutionHandler="*res://addons/integer_resolution_handler/integer_resolution_handler.gd"
-SaveTest="*res://SaveTest.gd"
 Graveyard="*res://Managers_Singletons/Graveyard.gd"
 
 [display]

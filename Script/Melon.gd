@@ -25,6 +25,7 @@ func _process(_delta):
 			$CollisionShape2D.disabled = true
 			$MelonSound.play()
 			Graveyard.bin.append("Melon")
+			
 			print(Graveyard.bin)
 
 			yield($MelonSound, "finished")

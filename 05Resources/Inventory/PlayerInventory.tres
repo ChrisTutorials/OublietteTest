@@ -7,3 +7,4 @@ script = ExtResource( 1 )
 Money = 0
 Potions = 0
 Keys = 0
+Collected = [  ]

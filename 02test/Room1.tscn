@@ -69,8 +69,8 @@ shape = SubResource( 1 )
 position = Vector2( 0, 6 )
 shape = SubResource( 2 )
 
-[node name="Money" parent="GameObjects" index="4" instance=ExtResource( 10 )]
-position = Vector2( 214, 73 )
+[node name="R1Coin1" parent="GameObjects" index="4" instance=ExtResource( 10 )]
+position = Vector2( 110, 175 )
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 3 )]
 position = Vector2( 154, 67 )

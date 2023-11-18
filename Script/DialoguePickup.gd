@@ -19,3 +19,4 @@ func _physics_process(delta):
 		queue_free()
 		Graveyard.bin.append("Knife")
 		print(Graveyard.bin)
+		

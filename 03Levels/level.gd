@@ -1,6 +1,7 @@
 extends Node2D
 #Level.gd
 class_name Level
+var player = Player
 
 export(NodePath) onready var level_camera = get_node(level_camera)
 export(NodePath) onready var game_objects = get_node(game_objects)
@@ -12,9 +13,8 @@ var camera_target : RemoteTransform2D
 var save_objs
 
 func _ready():
-
 	
-	#spawn_player(GameManager.player, GameManager.spawn_loc) old
+		#spawn_player(GameManager.player, GameManager.spawn_loc) old
 	save_objs = get_tree().get_nodes_in_group(GDict.saveable_objects_group)
 
 func spawn_player(player_scene : PackedScene, spawn_point_name : String):

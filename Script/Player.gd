@@ -48,7 +48,11 @@ func load_state(item_state : Resource):
 	if(item_state):
 		#player_name = item_state.player_name
 		inventory = item_state.player_inventory #just .inventory?
+		
 		State.coin_number = inventory.Money
 		State.potion_number = inventory.Potions
 		State.keys = inventory.Keys
+		
+		State.collected = inventory.Collected
+		
 		print("player/item state loaded")

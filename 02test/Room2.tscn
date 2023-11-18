@@ -214,38 +214,38 @@ position = Vector2( 0.5, 3.5 )
 [node name="Area2D" parent="GameObjects/Statue" index="2"]
 position = Vector2( 1, 3 )
 
-[node name="Money5" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 82, 56 )
+[node name="R2Coin" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 48, 67 )
 
-[node name="Money4" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 85, 66 )
-
-[node name="Money3" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 99, 69 )
-
-[node name="Money2" parent="GameObjects" instance=ExtResource( 17 )]
+[node name="R2Coin2" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 104, 59 )
 
-[node name="Money11" parent="GameObjects" instance=ExtResource( 17 )]
+[node name="R2Coin3" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 99, 69 )
+
+[node name="R2Coin4" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 85, 66 )
+
+[node name="R2Coin5" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 82, 56 )
+
+[node name="R2Coin6" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 133, 69 )
+
+[node name="R2Coin7" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 94, 86 )
+
+[node name="R2Coin8" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 108, 40 )
+
+[node name="R2Coin9" parent="GameObjects" instance=ExtResource( 17 )]
+position = Vector2( 74, 40 )
+
+[node name="R2Coin10" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 94, 51 )
 
 [node name="Key" parent="GameObjects" instance=ExtResource( 15 )]
 position = Vector2( 225, 104 )
-
-[node name="Money" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 48, 67 )
-
-[node name="Money6" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 133, 69 )
-
-[node name="Money7" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 94, 86 )
-
-[node name="Money8" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 108, 40 )
-
-[node name="Money9" parent="GameObjects" instance=ExtResource( 17 )]
-position = Vector2( 74, 40 )
 
 [node name="Transitions" type="Node2D" parent="."]
 

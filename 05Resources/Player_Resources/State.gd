@@ -14,6 +14,7 @@ var coin_number = 0
 var potion_number = 0
 var keys = 0
 
+var collected = []
 #var maxcoins = 10 #havent used these yet
 #var maxpotions = 5
 #var maxkeys = 1

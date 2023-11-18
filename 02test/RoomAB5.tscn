@@ -15,9 +15,7 @@ position = Vector2( 213, 157 )
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 4 )]
 position = Vector2( 264, 103 )
-
-[node name="StaticBody2D" parent="." index="5"]
-visible = false
+destination_level = "res://02test/Battle.tscn"
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 position = Vector2( 1, 0 )

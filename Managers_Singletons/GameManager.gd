@@ -86,6 +86,8 @@ func initialize_player():
 	
 	emit_signal("player_initialized", player)
 
+###
+
 func TestBattle():
 	SceneChanger.battlefade()
 	get_tree().change_scene("res://02test/Battle.tscn")

@@ -9,7 +9,7 @@ export var SceneExample: PackedScene
 export var FontExample: Font
 
 func _ready():
-	Textbox.queue_text(\"Goblin: I just wanted to see how much text we have. Seems like a lot? Maybe if we export varialbe... to here! wow that's nice.\")
+	Textbox.queue_text(\"Goblin: I just wanted to see how much text we have. Seems like a lot? Maybe if we export later... to here! wow that's nice.\")
 	Textbox.queue_text(\"But how do we break multi lines in the script?\")
 "
 
