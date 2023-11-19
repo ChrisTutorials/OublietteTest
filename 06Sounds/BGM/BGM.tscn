@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://06Sounds/BGM/STE-034 ice2.wav" type="AudioStream" id=1]
+[ext_resource path="res://06Sounds/BGM/Music_Files/STE-034 ice2.wav" type="AudioStream" id=1]
 [ext_resource path="res://06Sounds/BGM/BGM.gd" type="Script" id=2]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
 pause_mode = 2
 stream = ExtResource( 1 )
-volume_db = 16.0
+volume_db = 15.0
 autoplay = true
 script = ExtResource( 2 )
 

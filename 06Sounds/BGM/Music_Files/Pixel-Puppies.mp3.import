@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pixel-Puppies.mp3-fc9e45f47f7a115bcbe23f15eb068988.mp3str"
+
+[deps]
+
+source_file="res://06Sounds/BGM/Music_Files/Pixel-Puppies.mp3"
+dest_files=[ "res://.import/Pixel-Puppies.mp3-fc9e45f47f7a115bcbe23f15eb068988.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -16,9 +16,13 @@ func _pickup(player : Player):
 	#State.collected.append(money)
 	
 	player.inventory.Collected.append(money)
-	print(player.inventory.Collected)
+	#print(player.inventory.Collected)
 	print(State.collected)
 	
 func _ready():
+	if money in State.collected:
+		self.enabled = false
+
+func _process(_delta):
 	if money in State.collected:
 		self.enabled = false

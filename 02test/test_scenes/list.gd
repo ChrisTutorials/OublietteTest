@@ -13,8 +13,7 @@ func _input(_event):
 	else:
 		$CanvasLayer.hide()
 
-func _process(delta):
-
+func _process(_delta):
 	updateList()
 
 func updateList():
@@ -38,8 +37,8 @@ func _on_ItemList_item_activated(index):
 		Textbox.queue_text("It seems kind of silly to carry around a barrel, but this one has a nice blue paint job!")
 
 
+func _on_TreasureList_item_activated(_index):
+	pass
 
-
-
-func _on_TreasureList_item_activated(index):
+func _on_Button_pressed():
 	pass

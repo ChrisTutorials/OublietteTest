@@ -11,10 +11,7 @@ func _process(_delta):
 		save()
 		
 func save():
-	GameManager.save_game(
-		get_tree().get_current_scene().filename,
-		load_position_name
-	)
+	GameManager.save_game(get_tree().get_current_scene().filename,load_position_name)
 	$Sound.play()
 	get_tree().paused = true
 	

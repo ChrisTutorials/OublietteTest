@@ -54,5 +54,6 @@ func load_state(item_state : Resource):
 		State.keys = inventory.Keys
 		
 		State.collected = inventory.Collected
+		#print(State.collected)
 		
 		print("player/item state loaded")
