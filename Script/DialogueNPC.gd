@@ -2,6 +2,7 @@ extends Node2D #Dialogue NPC
 export(String, MULTILINE) var NPCDialogue
 export(Texture) var NPC_Texture = null
 var player_in_area
+
 func _ready():
 	#$Sprite.set_texture(NPC_Texture)
 	pass

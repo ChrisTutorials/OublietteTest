@@ -6,6 +6,7 @@ export(Resource) var enemy = null
 var current_player_health = 0
 var current_enemy_health = 0
 var defend = false
+
 signal kappawin
 
 export(String, FILE) var destination_level

@@ -72,8 +72,8 @@ func change_state(next_state):
 	current_state = next_state
 	match current_state:
 		State.READY:
-			print("Text.State.READY")
+			print("Textbox Ready,")
 		State.READING:
-			print("Text.State.READING")
+			print("Textbox Reading ...")
 		State.FINISHED:
-			print("Text.State.FINISHED")
+			print("Text Finished.")

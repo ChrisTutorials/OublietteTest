@@ -1,5 +1,5 @@
 extends "res://Script/DialogueNPC.gd"
-
+#old knife script 
 export var damage = 1
 
 

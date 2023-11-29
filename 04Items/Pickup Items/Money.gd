@@ -10,12 +10,13 @@ func _pickup(player : Player):
 	State.coin_number += amount
 	
 	player.inventory.Money += amount
-	print("Money held: ", player.inventory.Money)
+	print("Money: ", player.inventory.Money)
 	self.enabled = false
 	
-	#State.collected.append(money)
+	
 	
 	player.inventory.Collected.append(money)
+	
 	#print(player.inventory.Collected)
 	print(State.collected)
 	

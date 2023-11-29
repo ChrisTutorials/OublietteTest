@@ -10,10 +10,6 @@ func _ready():
 	
 	if melon in Graveyard.bin:
 		self.queue_free()
-	
-	
-
-
 
 func _process(_delta):
 	if(player_in_area && Input.is_action_just_pressed("interact")):
@@ -28,6 +24,7 @@ func _process(_delta):
 			
 			print(Graveyard.bin)
 
+
 			yield($MelonSound, "finished")
 			$Area2D/CollisionShape2D.disabled = true
 
@@ -41,8 +38,6 @@ func _process(_delta):
 func _on_Area2D_body_entered(body):
 	if(body is Player):
 		player_in_area = body
-
-
 
 func _on_Area2D_body_exited(body):
 	if(body == player_in_area):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://02test/Gachapon/Gatchapon.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/NPCs/Cyclops.png" type="Texture" id=2]
@@ -8,6 +8,11 @@
 [ext_resource path="res://02test/Gachapon/GachaPon.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Items/Money/Money1.png" type="Texture" id=8]
+[ext_resource path="res://Fonts/Nes fonts/NES.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+size = 6
+font_data = ExtResource( 9 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -118,8 +123,8 @@ margin_right = 187.0
 margin_bottom = 62.0
 theme = ExtResource( 3 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
 custom_styles/bg = SubResource( 1 )
-items = [ "Item 0", null, false ]
 
 [connection signal="pressed" from="Panel2/PayButton" to="." method="_on_PayButton_pressed"]
 [connection signal="pressed" from="Panel2/Exit" to="." method="_on_Exit_pressed"]

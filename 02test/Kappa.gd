@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var player_in_area
-var dialog = ConfirmationDialog.new()
+
 
 func _ready():
 	pass

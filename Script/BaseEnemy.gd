@@ -9,4 +9,5 @@ export(int) var evade = 0
 
 export(String, MULTILINE) var reply = null
 export(String, MULTILINE) var reply2 = null
+
 export(String, MULTILINE) var death = null

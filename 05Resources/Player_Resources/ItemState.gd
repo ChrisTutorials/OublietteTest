@@ -1,5 +1,5 @@
 extends Resource
-#aka the player's state
+
 class_name ItemState
 
 export(String) var player_name

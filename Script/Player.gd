@@ -7,9 +7,14 @@ export (float) var speed = 25
 export(Resource) var inventory
 export(NodePath) onready var audio_player = get_node(audio_player)
 
+
+
 func _ready():
 	GameManager.active_player = self
 	load_state(GameManager.game_data.item_state)
+
+	print("player ready")
+	
 
 func _process(_delta):
 	
@@ -53,7 +58,14 @@ func load_state(item_state : Resource):
 		State.potion_number = inventory.Potions
 		State.keys = inventory.Keys
 		
-		State.collected = inventory.Collected
-		#print(State.collected)
+		State.collected = inventory.Collected #tracks if items should stay gone if picked up.
 		
-		print("player/item state loaded")
+		State.playerlevel = inventory.playerlevel
+		State.current_health = inventory.current_health
+		#State.max_heatlh = inventory.max_health #some sort of issue with updating
+		State.damage = inventory.damage
+		#State.StatePrizes = inventory.StatePrizes #only updated in state. needs connection to player inventory
+		
+		print("player instance loaded, state.gd updated.")
+
+
