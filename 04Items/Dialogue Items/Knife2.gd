@@ -28,8 +28,8 @@ func _npcitemget(player : Player):
 	player.inventory.Collected.append(item_name)
 	
 	player.inventory.damage += amount
-	State.damage += amount
+	State.damage = player.inventory.damage
 	$Sound.play()
 	print(player.inventory.Collected)
 	#print("dmg" , player.inventory.damage)
-
+	State.StatePrizes.append(item_name)

@@ -604,3 +604,4 @@ parameters/Walk/blend_position = Vector2( -0.00315458, -0.0258621 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 volume_db = -20.0
+bus = "SFX"

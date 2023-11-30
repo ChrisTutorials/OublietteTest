@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room1.png" type="Texture" id=2]
@@ -7,9 +7,10 @@
 [ext_resource path="res://04Items/Pickup Items/Potion.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/NPCs/Bug.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/NPCs/kappa.png" type="Texture" id=7]
-[ext_resource path="res://02test/Kappa.gd" type="Script" id=8]
+[ext_resource path="res://Script/Kappa.gd" type="Script" id=8]
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=9]
 [ext_resource path="res://04Items/Pickup Items/Money.tscn" type="PackedScene" id=10]
+[ext_resource path="res://01Prefabs/Containers/Chest1/Chest1.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 10, 5.5 )
@@ -36,13 +37,11 @@ flip_h = true
 
 [node name="Potion4" parent="GameObjects" index="1" instance=ExtResource( 5 )]
 position = Vector2( 74, 152 )
-amount = 1
 
 [node name="DeBug" parent="GameObjects" index="2" instance=ExtResource( 9 )]
 position = Vector2( 61, 159 )
 NPCDialogue = "Hi there! This is the debug room! 
-... I'm de bug (-w-) 
-Hehe, just kidding. Here, take a potion!"
+... I'm de bug (-w-)  Hehe. Have some potions!"
 
 [node name="Sprite" parent="GameObjects/DeBug" index="0"]
 texture = ExtResource( 6 )
@@ -71,8 +70,13 @@ position = Vector2( 0, 6 )
 shape = SubResource( 2 )
 
 [node name="R1Coin1" parent="GameObjects" index="4" instance=ExtResource( 10 )]
-position = Vector2( 110, 175 )
-amount = 1
+position = Vector2( 84, 151 )
+
+[node name="Chest" parent="GameObjects" index="5" instance=ExtResource( 11 )]
+position = Vector2( 143, 164 )
+Chest_Text = "Inside the chest you find a Doll. Strange ...
+Does this look like me?"
+item_name = "Doll"
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 3 )]
 position = Vector2( 154, 67 )

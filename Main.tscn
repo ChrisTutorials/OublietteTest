@@ -83,6 +83,8 @@ tracks/1/keys = {
 pause_mode = 2
 script = ExtResource( 1 )
 start_scene = "res://02test/Room1.tscn"
+destination_level = "res://02test/test_scenes/BigTestRoom1.tscn"
+destination_spawn = "BigTestRoom1Spawn"
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -159,6 +161,20 @@ custom_styles/focus = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 text = "DEBUG"
 
+[node name="ROOMTEST" type="Button" parent="Control"]
+margin_left = 98.0
+margin_top = 176.0
+margin_right = 158.0
+margin_bottom = 185.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 7 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "ROOM TEST"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
 anims/SplashDown = SubResource( 2 )
@@ -195,4 +211,5 @@ texture = ExtResource( 11 )
 [connection signal="pressed" from="Control/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control/DEBUG" to="." method="_on_DEBUG_pressed"]
+[connection signal="pressed" from="Control/ROOMTEST" to="." method="_on_ROOMTEST_pressed"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

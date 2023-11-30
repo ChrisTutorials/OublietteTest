@@ -1,7 +1,7 @@
 extends CanvasLayer
-#pause #autoload
+#pause_screen #autoload
 var is_pause_active = false
-var dialog = ConfirmationDialog.new()
+
 
 func _ready():
 	$Menu.hide()
@@ -25,7 +25,7 @@ func _process(_delta):
 	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPNum.text = String(State.current_health)
 	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPMax.text = String(State.max_heatlh)
 	$JournalPanel/JournalBackPanel/Damage/DamageNum.text = String(State.damage)
-	
+
 
 
 func _input(_event):
@@ -38,6 +38,8 @@ func _input(_event):
 			is_pause_active = false
 			$Menu.hide()
 			$ItemPanel.hide()
+			print("unpaused")
+			
 		elif !is_tree_paused and !is_pause_active:
 			
 			is_pause_active = true
@@ -45,6 +47,7 @@ func _input(_event):
 			$Sound.play()
 			$Menu.show()
 			$Menu/Resume.grab_focus()
+			print("paused")
 
 func _on_Quit_pressed():
 	$Menu/ColorRect.show()
@@ -58,6 +61,7 @@ func _on_Resume_pressed():
 	$Menu.hide()
 	$ItemPanel.hide()
 	$JournalPanel.hide()
+	print("unpaused")
 
 func _on_Items_pressed():
 	#fade()
@@ -83,9 +87,7 @@ func fade():
 	yield(get_tree().create_timer(0.5), "timeout")
 	$Menu/ColorRect.hide()
 
-#func _notification(what):
-	#if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
-		#dialog.popup()
+
 
 func end():
 	get_tree().quit()

@@ -24,9 +24,11 @@ texture = ExtResource( 5 )
 [node name="Door" parent="GameObjects" index="0" instance=ExtResource( 11 )]
 position = Vector2( 136, 125 )
 script = ExtResource( 15 )
-NPCDialogue = "I'm Closed..."
+NPCDialogue = "I'm Locked ..."
 AltDialogue1 = "Click"
 OpenDialogue = "I'm Open!"
+NPC_Texture = null
+amount = 1
 
 [node name="Sprite" parent="GameObjects/Door" index="0"]
 position = Vector2( -1, -6 )
@@ -45,18 +47,19 @@ pitch_scale = 0.59
 position = Vector2( 29, 149 )
 
 [node name="DirtDevil" parent="GameObjects" index="2" instance=ExtResource( 11 )]
-position = Vector2( 200, 190 )
-NPCDialogue = "I'm here with the excavation team, but I got lost. I'm deliveirng these barrels of goop to my troupe. Have you heard of us?"
+position = Vector2( 144, 172 )
+NPCDialogue = "I'm here with the excavation team, but I got lost. I'm deliveirng these barrels of goop to my troupe. You?"
 
 [node name="Sprite" parent="GameObjects/DirtDevil" index="0"]
 texture = ExtResource( 14 )
 
 [node name="R3Coin1" parent="GameObjects" index="3" instance=ExtResource( 9 )]
 position = Vector2( 94, 191 )
+amount = 1
 
 [node name="Purr" parent="GameObjects" index="4" instance=ExtResource( 11 )]
 position = Vector2( 86, 194 )
-NPCDialogue = "Hey! I'm Purr. I'm here with the orb, for now. I was headed out to the glyph nearby. Please be careful if you're headed into the overgrowth."
+NPCDialogue = "Hey! I'm Purr. I'm here with the orb, for now. I was headed out to the glyph nearby. Be careful, now."
 
 [node name="Untitled221" type="Sprite" parent="GameObjects/Purr" index="0"]
 position = Vector2( -11, 2 )
@@ -66,9 +69,11 @@ texture = ExtResource( 2 )
 texture = ExtResource( 1 )
 
 [node name="ComplexNPC" parent="GameObjects" index="5" instance=ExtResource( 6 )]
-position = Vector2( 214, 187 )
-NPCDialogue = "*bonk* ...
-The front of the barrel says, \"Blue House Paint & Pancake Batter\"."
+position = Vector2( 157, 169 )
+NPCDialogue = "*bonk* ... The label says, \"Blue House Paint & Pancake Batter\"... ???"
+
+[node name="Area2D" parent="GameObjects/ComplexNPC" index="2"]
+scale = Vector2( 0.842, 0.707 )
 
 [node name="Sound" parent="GameObjects/ComplexNPC" index="3"]
 pause_mode = 2

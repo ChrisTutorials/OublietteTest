@@ -7,10 +7,10 @@ signal himonkey
 func _process(_delta):
 	if(player_in_area && Input.is_action_just_pressed("interact")):
 		if saidhi == true:
-			Textbox.queue_text("Thanks for playing with me ~~ \nTell Monkey we had fun!")
+			Textbox.queue_text("Thanks for playing with me ~~ \nTell Monke we had fun!")
 			emit_signal("himonkey")
 		else:
-			Textbox.queue_text("Pio Pio Pio ~ \nHi there! I'm Scorpion. \nI love pollo! Say it with me! Pio Pio Pio! <3")
+			Textbox.queue_text("Pio Pio Pio ~ \nHi there! I'm Scorpion. Sing with me <3")
 			saidhi = true
 
 func _on_Area2D_body_entered(body):

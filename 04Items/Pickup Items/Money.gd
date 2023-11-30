@@ -7,17 +7,14 @@ onready var money = get_name()
 
 func _pickup(player : Player):
 	
-	State.coin_number += amount
 	
 	player.inventory.Money += amount
+	State.coin_number = player.inventory.Money
 	print("Money: ", player.inventory.Money)
 	self.enabled = false
 	
-	
-	
 	player.inventory.Collected.append(money)
-	
-	#print(player.inventory.Collected)
+	State.collected = player.inventory.Collected
 	print(State.collected)
 	
 func _ready():

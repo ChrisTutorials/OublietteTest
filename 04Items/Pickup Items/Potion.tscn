@@ -9,8 +9,10 @@
 extents = Vector2( 4, 4.5 )
 
 [node name="Potion" instance=ExtResource( 1 )]
+pause_mode = 2
 script = ExtResource( 3 )
 pickup_sound = ExtResource( 4 )
+amount = 1
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2( 0, 2.5 )

@@ -14,7 +14,6 @@ func _ready():
 	load_state(GameManager.game_data.item_state)
 
 	print("player ready")
-	
 
 func _process(_delta):
 	
@@ -62,6 +61,7 @@ func load_state(item_state : Resource):
 		
 		State.playerlevel = inventory.playerlevel
 		State.current_health = inventory.current_health
+		
 		#State.max_heatlh = inventory.max_health #some sort of issue with updating
 		State.damage = inventory.damage
 		#State.StatePrizes = inventory.StatePrizes #only updated in state. needs connection to player inventory

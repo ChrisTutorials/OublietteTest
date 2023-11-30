@@ -102,10 +102,11 @@ flip_h = true
 [node name="Melon" parent="GameObjects" instance=ExtResource( 21 )]
 position = Vector2( 60, 42 )
 script = ExtResource( 22 )
-NPCDialogue = "I have laid out ten  jade coins in tribute to The Black Knights ..."
-AltDialogue1 = "Hey! How did you get so many coins?
-...
-Wait! No! 'A tithe is a tithe that binds in time!'"
+NPCDialogue = "I have laid out ten jade coins in tribute ...
+to The Black Dragon Knights ..."
+AltDialogue1 = "Hey! How did you get so many coins? ...hm?
+...Wait! No! 'A tithe is a vice that binds in time!'"
+NPC_Texture = null
 
 [node name="Sprite" parent="GameObjects/Melon" index="0"]
 texture = ExtResource( 2 )
@@ -137,9 +138,10 @@ position = Vector2( 3, 8 )
 position = Vector2( 236, 125 )
 script = ExtResource( 23 )
 AltText = "Thanks for playing with us! Here, take this key! 
-Kappa? No, he just wants to play! "
+If you challenge Kappa, he will lead the way."
 NPCDialogue = "Ook ook! Could you talk to Scorpion for me?
 He keeps singing 'pio pio pio' all day ..."
+NPC_Texture = null
 
 [node name="Sprite" parent="GameObjects/Monkey" index="0"]
 texture = ExtResource( 4 )
@@ -169,7 +171,7 @@ disabled = true
 
 [node name="Fruits" parent="GameObjects" instance=ExtResource( 21 )]
 position = Vector2( 172, 143 )
-NPCDialogue = "The fruits sit together quietly around the bubbling cauldron. A sweet, warm flavor wafts from within it's swirling ooze ... the booboo fruit catches your eye."
+NPCDialogue = "The fruits sit together quietly around the bubbling cauldron. A sweet, warm flavor wafts from within."
 
 [node name="Sprite" parent="GameObjects/Fruits" index="0"]
 texture = null
@@ -203,7 +205,7 @@ texture = ExtResource( 6 )
 
 [node name="Statue" parent="GameObjects" instance=ExtResource( 21 )]
 position = Vector2( 89, 27 )
-NPCDialogue = "The armor's empty gaze seeps into you from a slitted sallet. A faint glint in the darkness as you stare back, face-to-face ... with ... ?"
+NPCDialogue = "The armor's empty gaze seeps into you from a slitted sallet. A faint glint stares back ... but how?"
 
 [node name="Sprite" parent="GameObjects/Statue" index="0"]
 texture = null
@@ -216,33 +218,43 @@ position = Vector2( 1, 3 )
 
 [node name="R2Coin" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 48, 67 )
+amount = 1
 
 [node name="R2Coin2" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 104, 59 )
+amount = 1
 
 [node name="R2Coin3" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 99, 69 )
+amount = 1
 
 [node name="R2Coin4" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 85, 66 )
+amount = 1
 
 [node name="R2Coin5" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 82, 56 )
+amount = 1
 
 [node name="R2Coin6" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 133, 69 )
+amount = 1
 
 [node name="R2Coin7" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 94, 86 )
+amount = 1
 
 [node name="R2Coin8" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 108, 40 )
+amount = 1
 
 [node name="R2Coin9" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 74, 40 )
+amount = 1
 
 [node name="R2Coin10" parent="GameObjects" instance=ExtResource( 17 )]
 position = Vector2( 94, 51 )
+amount = 1
 
 [node name="Key" parent="GameObjects" instance=ExtResource( 15 )]
 position = Vector2( 225, 104 )

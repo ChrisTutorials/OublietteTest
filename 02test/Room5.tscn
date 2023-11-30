@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room5.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Items/dagger1.png" type="Texture" id=3]
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Script/DialoguePickup.gd" type="Script" id=5]
 [ext_resource path="res://06Sounds/8bit_Sounds/Secret1.wav" type="AudioStream" id=6]
 [ext_resource path="res://Triggers/area_move_level.tscn" type="PackedScene" id=8]
 [ext_resource path="res://04Items/Dialogue Items/Knife2.gd" type="Script" id=9]
@@ -14,25 +13,7 @@
 [node name="Background" parent="." index="0"]
 texture = ExtResource( 2 )
 
-[node name="Knife" parent="GameObjects" index="0" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( -24, 159 )
-script = ExtResource( 5 )
-NPCDialogue = "The blood on this knife is fresh ...
-Better take it with."
-damage = 1
-
-[node name="Sprite" parent="GameObjects/Knife" index="0"]
-texture = ExtResource( 3 )
-
-[node name="Area2D" parent="GameObjects/Knife" index="2"]
-position = Vector2( 0, 3 )
-
-[node name="Sound" type="AudioStreamPlayer2D" parent="GameObjects/Knife" index="3"]
-pause_mode = 2
-stream = ExtResource( 6 )
-
-[node name="Glyph" parent="GameObjects" index="1" instance=ExtResource( 4 )]
+[node name="Glyph" parent="GameObjects" index="0" instance=ExtResource( 4 )]
 position = Vector2( 59, 196 )
 NPCDialogue = "The glyph seems to have some charge left."
 
@@ -42,7 +23,7 @@ visible = false
 [node name="CollisionShape2D" parent="GameObjects/Glyph" index="1"]
 disabled = true
 
-[node name="Knife2" parent="GameObjects" index="2" instance=ExtResource( 4 )]
+[node name="Knife2" parent="GameObjects" index="1" instance=ExtResource( 4 )]
 position = Vector2( 98, 126 )
 script = ExtResource( 9 )
 NPCDialogue = "The blood on this knife is fresh ...
@@ -55,6 +36,7 @@ texture = ExtResource( 3 )
 
 [node name="Sound" parent="GameObjects/Knife2" index="3"]
 stream = ExtResource( 6 )
+volume_db = -10.0
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 8 )]
 position = Vector2( 186, 112 )
@@ -70,7 +52,6 @@ polygon = PoolVector2Array( 0, 65, 255, 65, 256, 240, 0, 240, 0, 170, 8, 165, 14
 
 [editable path="Camera2D"]
 [editable path="GameObjects"]
-[editable path="GameObjects/Knife"]
 [editable path="GameObjects/Glyph"]
 [editable path="GameObjects/Knife2"]
 [editable path="Transitions"]

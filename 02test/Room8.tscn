@@ -1,13 +1,55 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room8.png" type="Texture" id=1]
 [ext_resource path="res://Triggers/area_move_level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Unused/Untitled 8.png" type="Texture" id=4]
+[ext_resource path="res://01Prefabs/Containers/Chest1/Chest1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/Unused/Untitled 26.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Unused/Untitled 25.png" type="Texture" id=7]
+[ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
 
 [node name="LevelPrefab" instance=ExtResource( 3 )]
 
-[node name="Background" parent="." index="0"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="0"]
+color = Color( 0.607843, 0.215686, 0.529412, 1 )
+
+[node name="Background" parent="." index="1"]
 texture = ExtResource( 1 )
+
+[node name="Untitled8" type="Sprite" parent="GameObjects" index="0"]
+position = Vector2( 18, 225 )
+texture = ExtResource( 4 )
+
+[node name="Chest" parent="GameObjects" index="1" instance=ExtResource( 5 )]
+position = Vector2( 109, 212 )
+Chest_Text = "This chest is full of slime. - black, almost like a thick tar. A  sulfurous stench, an oily resin."
+item_name = "Pitch"
+
+[node name="Chest2" parent="GameObjects" index="2" instance=ExtResource( 5 )]
+position = Vector2( 140, 225 )
+Chest_Text = "Little scraps of felt are cut up in here, but one piece seems big enough to take with."
+item_name = "Felt"
+
+[node name="Burt" parent="GameObjects" index="3" instance=ExtResource( 8 )]
+position = Vector2( 46, 102 )
+NPCDialogue = "What's that? Kappa? Never heard of him. If you're looking for a way out, I can't help right now."
+
+[node name="Sprite" parent="GameObjects/Burt" index="0"]
+visible = false
+texture = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="GameObjects/Burt" index="1"]
+frames = SubResource( 1 )
+playing = true
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 2 )]
 position = Vector2( 260, 136 )
@@ -23,6 +65,7 @@ polygon = PoolVector2Array( -9, 22, -9, 256, 264, 256, 271, -9, 19, -9, 61, 58, 
 
 [editable path="Camera2D"]
 [editable path="GameObjects"]
+[editable path="GameObjects/Burt"]
 [editable path="Transitions"]
 [editable path="SpawnPoints"]
 [editable path="StaticBody2D"]

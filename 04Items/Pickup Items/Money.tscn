@@ -9,8 +9,10 @@
 extents = Vector2( 4, 4.5 )
 
 [node name="Money" instance=ExtResource( 1 )]
+pause_mode = 2
 script = ExtResource( 2 )
 pickup_sound = ExtResource( 4 )
+amount = 1
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource( 1 )

@@ -152,6 +152,7 @@ texture = ExtResource( 5 )
 pause_mode = 2
 position = Vector2( 159, 78 )
 frames = SubResource( 1 )
+frame = 2
 playing = true
 
 [node name="bioworm1" type="Sprite" parent="GameObjects" index="4"]
@@ -160,7 +161,7 @@ texture = ExtResource( 6 )
 
 [node name="Worker" parent="GameObjects" index="5" instance=ExtResource( 3 )]
 position = Vector2( 211, 95 )
-NPCDialogue = "The biowurms gather fruit for us in the silo gardens. Moss grows on everything around the overgrowth due to the moisture levels needed."
+NPCDialogue = "The biowurms gather fruit for us in the silo gardens. Moss grows on everything around these parts."
 
 [node name="Sprite" parent="GameObjects/Worker" index="0"]
 texture = ExtResource( 8 )

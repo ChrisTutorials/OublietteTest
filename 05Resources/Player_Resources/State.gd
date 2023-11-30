@@ -1,5 +1,6 @@
 extends Node
-#global player display / stat states.gd #autoload
+
+#used for pulling display data & stat info from the player inventory resource
 
 var playerlevel = 1
 
@@ -15,10 +16,4 @@ var potion_number = 0
 var keys = 0
 
 var collected = []
-#var maxcoins = 10 #havent used these yet
-#var maxpotions = 5
-#var maxkeys = 1
-
-#export var xp = 0
-
 

@@ -8,6 +8,8 @@ export(Texture) var NPC_Texture = null
 var player_in_area
 var open = false
 
+export var amount = 1
+
 func _ready():
 	pass
 
@@ -21,9 +23,9 @@ func _process(_delta):
 func _push_text():
 	if open == true:
 		Textbox.queue_text(OpenDialogue)
-	elif State.keys >= 1:
+	elif State.keys >= amount:
 		Textbox.queue_text(AltDialogue1)
-		State.keys -= 1
+		State.keys -= amount
 		open = true
 		_push_sound()
 	else:

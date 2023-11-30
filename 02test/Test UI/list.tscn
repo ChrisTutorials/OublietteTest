@@ -1,0 +1,184 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Items/BottleSprite.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Untitled 22 1.png" type="Texture" id=3]
+[ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=4]
+[ext_resource path="res://Sprites/Items/Key.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Items/Fruits/Untitled 35.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Barrel.png" type="Texture" id=7]
+[ext_resource path="res://02test/Test UI/list.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/Gob.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/NPCs/Bug.png" type="Texture" id=10]
+[ext_resource path="res://Assets/MyTheme/MyTheme1.tres" type="Theme" id=11]
+[ext_resource path="res://Sprites/Unused/Untitled 16.png" type="Texture" id=12]
+[ext_resource path="res://01Prefabs/Containers/Chest1/Untitled 11.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Splash.png" type="Texture" id=14]
+[ext_resource path="res://Assets/MinimalUI/MinimalUI.tres" type="Theme" id=15]
+[ext_resource path="res://Sprites/NPCs/Pur 1.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Items/dagger1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Items/Fruits/Untitled 29.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/NPCs/Untitled 5.png" type="Texture" id=19]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Control" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 11 )
+script = ExtResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -96.5
+margin_top = -104.0
+margin_right = 96.5
+margin_bottom = 104.0
+theme = ExtResource( 11 )
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Panel"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -89.5
+margin_top = -24.0
+margin_right = 89.5
+margin_bottom = 24.0
+hint_tooltip = "Select an item for it's description."
+theme = ExtResource( 11 )
+custom_styles/bg = SubResource( 3 )
+items = [ "Potion", ExtResource( 2 ), false, "Orb", ExtResource( 3 ), false, "Key", ExtResource( 5 ), false, "Booboo", ExtResource( 6 ), false, "Coin", ExtResource( 1 ), false, "Barrel", ExtResource( 7 ), false ]
+max_columns = 3
+same_column_width = true
+fixed_icon_size = Vector2( 16, 16 )
+
+[node name="Beastiary" type="Panel" parent="CanvasLayer"]
+pause_mode = 2
+margin_left = 40.0
+margin_top = 25.0
+margin_right = 110.0
+margin_bottom = 90.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Beastiary"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_right = -3.0
+margin_bottom = -4.0
+texture = ExtResource( 9 )
+
+[node name="ItemList" type="ItemList" parent="CanvasLayer/Beastiary"]
+margin_left = 3.0
+margin_top = 20.0
+margin_right = 66.0
+margin_bottom = 62.0
+theme = ExtResource( 15 )
+custom_styles/bg = SubResource( 1 )
+items = [ "DeBug", ExtResource( 10 ), false, "Monke", ExtResource( 19 ), false, "Purr", ExtResource( 16 ), false, "Fruit", ExtResource( 18 ), false, "Knife", ExtResource( 17 ), false ]
+fixed_icon_size = Vector2( 16, 16 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Beastiary"]
+margin_left = 40.0
+margin_top = 8.0
+margin_right = 63.0
+margin_bottom = 16.0
+text = "Hello!"
+
+[node name="splash" type="Panel" parent="CanvasLayer"]
+pause_mode = 2
+margin_left = 112.0
+margin_top = 25.0
+margin_right = 217.0
+margin_bottom = 90.0
+custom_styles/panel = ExtResource( 4 )
+
+[node name="Splash" type="Sprite" parent="CanvasLayer/splash"]
+position = Vector2( 52, 27 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 14 )
+
+[node name="Label2" type="Label" parent="CanvasLayer/splash"]
+margin_left = 2.0
+margin_top = 5.0
+margin_right = 103.0
+margin_bottom = 13.0
+text = "descent into the unknown"
+
+[node name="Label" type="Label" parent="CanvasLayer/splash"]
+margin_left = 5.0
+margin_top = 53.0
+margin_right = 101.0
+margin_bottom = 61.0
+text = "by dungeon corporation"
+
+[node name="Tree" type="Tree" parent="CanvasLayer"]
+margin_left = 39.0
+margin_top = 150.0
+margin_right = 217.0
+margin_bottom = 218.0
+custom_styles/bg = ExtResource( 4 )
+column_titles_visible = true
+hide_root = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Tree"]
+margin_left = 5.0
+margin_top = 9.0
+margin_right = 45.0
+margin_bottom = 22.0
+text = "Treasures"
+
+[node name="TreasureList" type="ItemList" parent="CanvasLayer/Tree"]
+margin_left = 4.0
+margin_top = 21.0
+margin_right = 130.0
+margin_bottom = 61.0
+theme = ExtResource( 15 )
+custom_styles/bg = SubResource( 2 )
+items = [ "Potion", null, false, "Goober", null, false, "Dias", null, false, "Poison Oil", null, false, "Molten Cake", null, false, "Moodberry", null, false, "Potion", null, false, "Mushroom", null, false, "Book III", null, false, "Red Chalice", null, false, "Yoke", null, false ]
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Tree"]
+position = Vector2( 142, 53 )
+texture = ExtResource( 12 )
+
+[node name="Untitled11" type="Sprite" parent="CanvasLayer/Tree"]
+position = Vector2( 159, 54 )
+texture = ExtResource( 13 )
+
+[node name="MusicLabel" type="Label" parent="CanvasLayer"]
+margin_left = 173.0
+margin_top = 172.0
+margin_right = 213.0
+margin_bottom = 185.0
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="CanvasLayer"]
+margin_left = 172.0
+margin_top = 181.0
+margin_right = 212.0
+margin_bottom = 209.0
+rect_scale = Vector2( 0.988, 0.4 )
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[connection signal="item_activated" from="CanvasLayer/Panel/ItemList" to="." method="_on_ItemList_item_activated"]
+[connection signal="item_activated" from="CanvasLayer/Tree/TreasureList" to="." method="_on_TreasureList_item_activated"]
+[connection signal="value_changed" from="CanvasLayer/MusicSlider" to="." method="_on_MusicSlider_value_changed"]

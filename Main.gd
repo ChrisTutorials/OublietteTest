@@ -3,6 +3,10 @@ extends Node
 export(String, FILE) var start_scene
 export(String) var start_location = "player_start"
 
+
+export(String, FILE) var destination_level
+export(String) var destination_spawn
+
 # Load the starting level of the game
 func _ready():
 	get_tree().paused = true
@@ -28,4 +32,10 @@ func _on_AnimationPlayer_animation_finished(_SplashDown):
 
 func _on_DEBUG_pressed():
 	get_tree().change_scene("res://02test/test_scenes/F17Pix.tscn")
+	get_tree().paused = false
+
+
+
+func _on_ROOMTEST_pressed():
+	GameManager.load_level(destination_level, destination_spawn)
 	get_tree().paused = false

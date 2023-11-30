@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://01Prefabs/NPC/DialogueNPC.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Sprites/Backgrounds/Levels/Room7.png" type="Texture" id=2]
@@ -6,13 +6,24 @@
 [ext_resource path="res://01Prefabs/LevelPrefab.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Script/DialogueNPC.gd" type="Script" id=5]
 [ext_resource path="res://04Items/Pickup Items/Money.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/Unused/Untitled 36.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Light/Untitled.png" type="Texture" id=9]
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 12.0
 
 [node name="Room7" instance=ExtResource( 4 )]
 
-[node name="Background" parent="." index="0"]
+[node name="CanvasModulate" type="CanvasModulate" parent="." index="0"]
+color = Color( 0.607843, 0.215686, 0.529412, 1 )
+
+[node name="Light2D" type="Light2D" parent="." index="1"]
+position = Vector2( 79, 142 )
+texture = ExtResource( 9 )
+texture_scale = 1.26
+color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[node name="Background" parent="." index="2"]
 texture = ExtResource( 2 )
 
 [node name="IronBars" parent="GameObjects" index="0" instance=ExtResource( 1 )]
@@ -25,7 +36,7 @@ texture = null
 [node name="PortalScratch" type="StaticBody2D" parent="GameObjects" index="1"]
 position = Vector2( 77, 145 )
 script = ExtResource( 5 )
-NPCDialogue = "The glyph has been scratched away ... "
+NPCDialogue = "The glyph has been scratched away ... but it still emits a faint light."
 
 [node name="Sprite" type="Sprite" parent="GameObjects/PortalScratch" index="0"]
 
@@ -36,9 +47,15 @@ shape = SubResource( 2 )
 
 [node name="R7Coin" parent="GameObjects" index="2" instance=ExtResource( 6 )]
 position = Vector2( 85, 112 )
+amount = 1
 
 [node name="R7Coin2" parent="GameObjects" index="3" instance=ExtResource( 6 )]
 position = Vector2( 73, 108 )
+amount = 1
+
+[node name="Untitled36" type="Sprite" parent="GameObjects" index="4"]
+position = Vector2( 221, 234 )
+texture = ExtResource( 7 )
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 3 )]
 position = Vector2( 229, 98 )
@@ -51,7 +68,7 @@ position = Vector2( 78, 143 )
 [node name="FromRoom8" type="Position2D" parent="SpawnPoints" index="1"]
 position = Vector2( 204, 108 )
 
-[node name="StaticBody2D" parent="." index="5"]
+[node name="StaticBody2D" parent="." index="7"]
 visible = false
 
 [node name="CollisionPolygon2D" parent="StaticBody2D" index="0"]

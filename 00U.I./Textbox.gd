@@ -15,7 +15,6 @@ enum State {
 }
 
 
-
 var current_state = State.READY
 var text_queue = []
 
