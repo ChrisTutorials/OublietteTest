@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://00U.I./Textbox.gd" type="Script" id=1]
+[ext_resource path="res://00_UI/Textbox.gd" type="Script" id=1]
 [ext_resource path="res://02test/BattleBoxStyle.tres" type="StyleBox" id=2]
 
 [sub_resource type="DynamicFontData" id=2]

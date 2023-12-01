@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://00U.I./SceneChanger/SceneChanger.gd" type="Script" id=1]
+[ext_resource path="res://00_UI/SceneChanger/SceneChanger.gd" type="Script" id=1]
 [ext_resource path="res://06Sounds/8bit_Sounds/Hit4.wav" type="AudioStream" id=2]
 
 [node name="SceneChanger" type="CanvasLayer"]

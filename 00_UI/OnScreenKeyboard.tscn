@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://00U.I./arrows/Down.png" type="Texture" id=1]
-[ext_resource path="res://00U.I./arrows/Right.png" type="Texture" id=2]
+[ext_resource path="res://00_UI/arrows/Down.png" type="Texture" id=1]
+[ext_resource path="res://00_UI/arrows/Right.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Items/Money/Money.png" type="Texture" id=3]
-[ext_resource path="res://00U.I./arrows/Left.png" type="Texture" id=4]
-[ext_resource path="res://00U.I./OnScreenKeyboard.gd" type="Script" id=5]
-[ext_resource path="res://00U.I./arrows/Up.png" type="Texture" id=6]
+[ext_resource path="res://00_UI/arrows/Left.png" type="Texture" id=4]
+[ext_resource path="res://00_UI/OnScreenKeyboard.gd" type="Script" id=5]
+[ext_resource path="res://00_UI/arrows/Up.png" type="Texture" id=6]
 
 [node name="GUI" type="CanvasLayer"]
 pause_mode = 2

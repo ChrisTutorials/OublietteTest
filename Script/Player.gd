@@ -67,5 +67,3 @@ func load_state(item_state : Resource):
 		#State.StatePrizes = inventory.StatePrizes #only updated in state. needs connection to player inventory
 		
 		print("player instance loaded, state.gd updated.")
-
-
