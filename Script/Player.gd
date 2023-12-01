@@ -4,10 +4,10 @@ class_name Player
 
 export(String) var player_name = "Player1"
 export (float) var speed = 25
-export(Resource) var inventory
+
 export(NodePath) onready var audio_player = get_node(audio_player)
 
-
+export(Resource) var inventory
 
 func _ready():
 	GameManager.active_player = self

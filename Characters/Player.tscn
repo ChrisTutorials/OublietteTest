@@ -562,8 +562,8 @@ graph_offset = Vector2( -21.06, 14.0925 )
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 129, 119 )
 script = ExtResource( 2 )
-inventory = ExtResource( 3 )
 audio_player = NodePath("AudioStreamPlayer2D")
+inventory = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
