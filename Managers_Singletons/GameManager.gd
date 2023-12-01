@@ -23,16 +23,14 @@ func load_game():
 		
 		if(load_game_data != null):
 			print("Save Data found! " + FULL_FILE_PATH)
-			game_data = load_game_data
-			#Load Level
+			game_data = load_game_data #Load Level
 
 			load_level(game_data.current_level, game_data.load_position)
 		else:
 			print_debug("Resource Error: Not Found")
-			Textbox.queue_text("Save Data Error")
 	else:
 		print_debug("No Save Data in app_userdata")
-		#Textbox.queue_text("No Save Data!")
+		Textbox.queue_text("Oops! No Save Data!")
 
 func finish_loading_level():
 	var level = get_tree().current_scene
