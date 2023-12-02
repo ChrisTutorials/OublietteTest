@@ -49,6 +49,7 @@ texture = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="GameObjects/Burt" index="1"]
 frames = SubResource( 1 )
+frame = 1
 playing = true
 
 [node name="trigger_move_level" parent="Transitions" index="0" instance=ExtResource( 2 )]

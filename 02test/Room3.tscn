@@ -55,7 +55,6 @@ texture = ExtResource( 14 )
 
 [node name="R3Coin1" parent="GameObjects" index="3" instance=ExtResource( 9 )]
 position = Vector2( 94, 191 )
-amount = 1
 
 [node name="Purr" parent="GameObjects" index="4" instance=ExtResource( 11 )]
 position = Vector2( 86, 194 )
