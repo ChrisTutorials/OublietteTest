@@ -69,7 +69,7 @@ config/icon="res://Sprites/Items/BottleSprite.png"
 [autoload]
 
 GameManager="*res://Managers_Singletons/GameManager.tscn"
-State="*res://05Resources/Player_Resources/State.gd"
+State="*res://05Resources/Player_Resources/State.tscn"
 Helpers="*res://Script/Helpers.gd"
 List="*res://02test/Test UI/list.tscn"
 PauseMenu="*res://00_UI/pause_menu/PauseMenu.tscn"

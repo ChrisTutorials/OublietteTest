@@ -85,6 +85,7 @@ script = ExtResource( 1 )
 start_scene = "res://02test/Room1.tscn"
 destination_level = "res://02test/test_scenes/BigTestRoom1.tscn"
 destination_spawn = "BigTestRoom1Spawn"
+debug_level = "res://02test/test_scenes/F17Pix.tscn"
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0

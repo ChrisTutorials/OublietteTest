@@ -8,16 +8,16 @@ onready var potion = get_name()
 func _pickup(player : Player):
 	
 	player.inventory.Potions += amount
-	State.potion_number = player.inventory.Potions
+	# State.potion_number = player.inventory.Potions
 	print("Potions held: ", player.inventory.Potions)
 	self.enabled = false
 	
 	player.inventory.Collected.append(potion)
-	State.collected = player.inventory.Collected
-	print(State.collected)
+	# State.collected = player.inventory.Collected
+	print(State.inventory.Collected)
 
 func _update_potions():
-	if potion in State.collected:
+	if potion in State.inventory.Collected:
 		self.enabled = false
 
 	

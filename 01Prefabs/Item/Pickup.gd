@@ -9,7 +9,7 @@ func set_enabled(isEnabled : bool):
 	enabled = isEnabled
 
 func _pickup(_player : Player):
-	printerr("No Child Set")
+	push_error("Not implemented. Write pickup code in extended class")
 
 func _disable_pickup():
 	set_deferred("monitorable", false)

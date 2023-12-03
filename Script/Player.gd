@@ -13,7 +13,6 @@ export(NodePath) onready var audio_player = get_node(audio_player)
 
 func _ready():
 	GameManager.active_player = self
-	load_state(GameManager.game_data.item_state)
 
 	print("player ready")
 
@@ -51,18 +50,19 @@ func save_state():
 	return item_state
 
 func load_state(item_state : Resource):
-	if(item_state):
-		player_name = item_state.player_name
-		inventory = item_state.player_inventory
-		
-		State.coin_number = inventory.Money
-		State.potion_number = inventory.Potions
-		State.keys = inventory.Keys
-		State.collected = inventory.Collected #tracks if items should stay gone if picked up.
-		State.playerlevel = inventory.playerlevel
-		State.current_health = inventory.current_health
-		State.damage = inventory.damage
-		#State.max_heatlh = inventory.max_health #some sort of issue with updating
-		#State.StatePrizes = inventory.StatePrizes 
-		
-		print("player instance loaded, state.gd updated.")
+	assert(item_state != null)
+	player_name = item_state.player_name
+	inventory = item_state.player_inventory
+
+	# Not needed, the state inventory and the player inventory resources are the same	
+	#State.coin_number = inventory.Money
+	#State.potion_number = inventory.Potions
+	#State.keys = inventory.Keys
+	#State.collected = inventory.Collected #tracks if items should stay gone if picked up.
+	#State.playerlevel = inventory.playerlevel
+	#State.current_health = inventory.current_health
+	#State.damage = inventory.damage
+	#State.max_heatlh = inventory.max_health #some sort of issue with updating
+	#State.StatePrizes = inventory.StatePrizes 
+	
+	print("player instance loaded, state.gd updated.")
