@@ -1,9 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://05Resources/Game Data/GameData.gd" type="Script" id=1]
+[ext_resource path="res://05Resources/Player_Resources/item_state.tres" type="Resource" id=2]
 
 [resource]
 script = ExtResource( 1 )
 current_level = ""
 load_position = ""
+item_state = ExtResource( 2 )
 level_states = [  ]

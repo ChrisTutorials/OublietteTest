@@ -7,6 +7,9 @@ export(Resource) var game_data
 var spawn_loc : String
 var active_player : Player
 
+func _ready():
+	_validate_game_data(game_data)
+
 func load_level(level_path : String, spawn_location : String):
 	self.spawn_loc = spawn_location
 	var err = get_tree().change_scene(level_path)
@@ -87,6 +90,12 @@ func initialize_player():
 		return
 	
 	emit_signal("player_initialized", player)
+
+## Use this to check that the nested resources are set on the manager correctly
+func _validate_game_data(game_data : Resource):
+	assert(game_data)
+	assert(game_data.item_state)
+	assert(game_data.item_state.player_inventory)
 
 ###
 
