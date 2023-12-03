@@ -17,14 +17,14 @@ func _ready():
 
 func _process(_delta):
 	
-	$ItemPanel/Panel/CoinsCount.text = String(State.inventory.Money)
-	$ItemPanel/Panel/PotionsCount.text = String(State.inventory.Potions)
-	$ItemPanel/Panel/KeysCount.text = String(State.inventory.Keys)
+	$ItemPanel/Panel/CoinsCount.text = String(State.coin_number)
+	$ItemPanel/Panel/PotionsCount.text = String(State.potion_number)
+	$ItemPanel/Panel/KeysCount.text = String(State.keys)
 	
-	$JournalPanel/JournalBackPanel/PlayerLevel/LevelNum.text = String(State.inventory.playerlevel)
-	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPNum.text = String(State.inventory.current_health)
-	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPMax.text = String(State.inventory.max_health)
-	$JournalPanel/JournalBackPanel/Damage/DamageNum.text = String(State.inventory.damage)
+	$JournalPanel/JournalBackPanel/PlayerLevel/LevelNum.text = String(State.playerlevel)
+	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPNum.text = String(State.current_health)
+	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPMax.text = String(State.max_health)
+	$JournalPanel/JournalBackPanel/Damage/DamageNum.text = String(State.damage)
 
 
 

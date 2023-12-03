@@ -50,15 +50,14 @@ func load_state(inventory_state : Resource):
 	assert(inventory_state != null)
 	inventory = inventory_state
 
-	# Not needed, the state inventory and the player inventory resources are the same	
-	#State.coin_number = inventory.Money
-	#State.potion_number = inventory.Potions
-	#State.keys = inventory.Keys
-	#State.collected = inventory.Collected #tracks if items should stay gone if picked up.
-	#State.playerlevel = inventory.playerlevel
-	#State.current_health = inventory.current_health
-	#State.damage = inventory.damage
-	#State.max_heatlh = inventory.max_health #some sort of issue with updating
-	#State.StatePrizes = inventory.StatePrizes 
+	State.coin_number = inventory.Money
+	State.potion_number = inventory.Potions
+	State.keys = inventory.Keys
+	State.collected = inventory.Collected #tracks if items should stay gone if picked up.
+	State.playerlevel = inventory.playerlevel
+	State.current_health = inventory.current_health
+	State.damage = inventory.damage
+	State.max_health = inventory.max_health #some sort of issue with updating
+	State.StatePrizes = inventory.StatePrizes 
 	
 	print("player instance loaded, state.gd updated.")

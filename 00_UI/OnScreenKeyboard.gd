@@ -28,8 +28,8 @@ func _input(_event):
 			$InputY.show()
 
 func _process(_delta):
-	$Control/MoneyCount/MoneyLabel.text = String(State.inventory.Money)
-	$Control/HPCount/CurrentHP.text = String(State.inventory.current_health)
+	$Control/MoneyCount/MoneyLabel.text = String(State.coin_number)
+	$Control/HPCount/CurrentHP.text = String(State.current_health)
 	
 	if Input.is_action_just_pressed("up"):
 		$Keys/Up.frame = 1

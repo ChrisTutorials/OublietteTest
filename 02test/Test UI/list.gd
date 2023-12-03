@@ -3,7 +3,7 @@ extends Control
 #list ui testing
 #boolean note: using !name is the INVERSE of something
 
-var collectedPrizes = State.inventory.StatePrizes
+var collectedPrizes = State.StatePrizes
 
 var is_pause_active = false
 
