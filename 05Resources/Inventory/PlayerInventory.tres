@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
+player_name = ""
 Money = 0
 Potions = 0
 Keys = 0
@@ -11,6 +12,6 @@ Collected = [  ]
 Items = [  ]
 playerlevel = 1
 current_health = 10
-max_heatlh = 10
+max_health = 10
 damage = 2
 StatePrizes = [  ]

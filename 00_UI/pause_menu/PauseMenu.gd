@@ -23,7 +23,7 @@ func _process(_delta):
 	
 	$JournalPanel/JournalBackPanel/PlayerLevel/LevelNum.text = String(State.inventory.playerlevel)
 	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPNum.text = String(State.inventory.current_health)
-	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPMax.text = String(State.inventory.max_heatlh)
+	$JournalPanel/JournalBackPanel/HPLabel/HPBoxContainer/HPMax.text = String(State.inventory.max_health)
 	$JournalPanel/JournalBackPanel/Damage/DamageNum.text = String(State.inventory.damage)
 
 

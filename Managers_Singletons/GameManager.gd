@@ -37,7 +37,7 @@ func load_game():
 			current_game_data = null # Clear current game state
 			current_game_data = load_game_data
 			print("Save Data found! " + FULL_FILE_PATH)
-
+			print_debug("Trying to load level " + current_game_data.current_level)
 			load_level(current_game_data.current_level, current_game_data.load_position)
 		else:
 			push_error("Resource Error: Not Found")
@@ -54,14 +54,16 @@ func finish_loading_level():
 	if(level is Level):
 		level.spawn_player(player, spawn_loc)
 		level.load_level_state(get_level_state(level.filename))
-		active_player.load_state(current_game_data.item_state)
+		active_player.load_state(current_game_data.inventory)
 
 func save_game(current_level : String, load_position : String):
 	assert(active_player != null)
 	print("SAVING GAME")
-	current_game_data.current_level = current_level
-	current_game_data.load_position = load_position
-	current_game_data.item_state = active_player.save_state()
+	var new_save_data = GameData.new()
+	new_save_data.current_level = current_level
+	new_save_data.load_position = load_position
+	new_save_data.inventory = active_player.inventory
+	print_debug(str(new_save_data.inventory.Money) + " Money")
 	
 	var current_scene = get_tree().get_current_scene()
 	
@@ -71,12 +73,13 @@ func save_game(current_level : String, load_position : String):
 		
 		if(found_index >= 0):
 			
-			current_game_data.level_states[found_index] = current_scene.get_level_state() #Replace level data
+			new_save_data.level_states[found_index] = current_scene.get_level_state() #Replace level data
 		else:
-			current_game_data.level_states.append(current_scene.get_level_state())
+			new_save_data.level_states.append(current_scene.get_level_state())
 		
 	
-	assert(ResourceSaver.save(FULL_FILE_PATH, current_game_data) == OK)
+	assert(ResourceSaver.save(FULL_FILE_PATH, new_save_data, ResourceSaver.FLAG_BUNDLE_RESOURCES) == OK)
+	
 	print("GAME SAVED:" + FULL_FILE_PATH)
 
 func get_level_state(level_filename : String):
@@ -106,8 +109,7 @@ func initialize_player():
 ## Use this to check that the nested resources are set on the manager correctly
 func _validate_game_data(p_game_data : Resource):
 	assert(p_game_data)
-	assert(p_game_data.item_state)
-	assert(p_game_data.item_state.player_inventory)
+	assert(p_game_data.inventory)
 
 ###
 

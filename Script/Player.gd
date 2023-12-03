@@ -44,15 +44,12 @@ func _process(_delta):
 	OnScreenKeyboard.set_on_screen_input_vector(velocity)
 
 func save_state():
-	var item_state = ItemState.new()
-	item_state.player_name = player_name
-	item_state.player_inventory = inventory
-	return item_state
+	return inventory
 
-func load_state(item_state : Resource):
-	assert(item_state != null)
-	player_name = item_state.player_name
-	inventory = item_state.player_inventory
+func load_state(inventory_state : Resource):
+	assert(inventory_state != null)
+	inventory = inventory_state
+	State.inventory = inventory
 
 	# Not needed, the state inventory and the player inventory resources are the same	
 	#State.coin_number = inventory.Money
