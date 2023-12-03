@@ -61,7 +61,7 @@ func save_game(current_level : String, load_position : String):
 	var new_save_data = GameData.new()
 	new_save_data.current_level = current_level
 	new_save_data.load_position = load_position
-	new_save_data.inventory = Inventory.new()
+	new_save_data.inventory = active_player.inventory
 	print_debug(str(new_save_data.inventory.Money) + " Money")
 	print_debug("Saving current level as " + current_level)
 	
