@@ -63,6 +63,6 @@ func load_state(item_state : Resource):
 		State.current_health = inventory.current_health
 		State.damage = inventory.damage
 		#State.max_heatlh = inventory.max_health #some sort of issue with updating
-		#State.StatePrizes = inventory.StatePrizes #only updated in state. needs connection to player inventory
+		#State.StatePrizes = inventory.StatePrizes 
 		
 		print("player instance loaded, state.gd updated.")

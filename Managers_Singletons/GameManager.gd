@@ -61,7 +61,7 @@ func save_game(current_level : String, load_position : String):
 			game_data.level_states.append(current_scene.get_level_state())
 		
 	
-	assert(ResourceSaver.save(FULL_FILE_PATH, game_data, ResourceSaver.FLAG_BUNDLE_RESOURCES) == OK)
+	assert(ResourceSaver.save(FULL_FILE_PATH, game_data) == OK)
 	print("GAME SAVED:" + FULL_FILE_PATH)
 
 func get_level_state(level_filename : String):

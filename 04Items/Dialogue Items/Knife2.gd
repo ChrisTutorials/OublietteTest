@@ -21,15 +21,17 @@ func _process(_delta):
 			_npcitemget(player_in_area)
 
 
-
 func _npcitemget(player : Player):
 	
-	#player.inventory.Items.append(item_name)
-	player.inventory.Collected.append(item_name)
+	State.StatePrizes.append(item_name)
 	
+	#player.inventory.Items.append(item_name)
+	#player.inventory.StatePrizes.append(item_name)
+	player.inventory.Collected.append(item_name)
 	player.inventory.damage += amount
 	State.damage = player.inventory.damage
+	#State.StatePrizes = player.inventory.StatePrizes
 	$Sound.play()
 	print(player.inventory.Collected)
 	#print("dmg" , player.inventory.damage)
-	State.StatePrizes.append(item_name)
+	#print("prizes:" , player.inventory.StatePrizes)
