@@ -3,19 +3,18 @@ extends Node
 const FULL_FILE_PATH = "user://game-data.tres"
 signal player_initialized
 export(PackedScene) var player
-export(Resource) var default_game_data : Resource # Set defaults in editor
 var spawn_loc : String
 var active_player : Player
 
 ## The current game state
-var current_game_data : Resource 
+var current_game_data : GameData = GameData.new()
 
 func _ready():
-	_validate_game_data(default_game_data)
+	_validate_game_data(current_game_data)
 	
 ## Call this to start the game with a new save state
 func start_game(level_path : String, spawn_location : String):
-	current_game_data = default_game_data
+	current_game_data = GameData.new()
 	load_level(level_path, spawn_location)
 	
 ## Loads a level but does not reset the save state
@@ -24,6 +23,7 @@ func load_level(level_path : String, spawn_location : String):
 	var err = get_tree().change_scene(level_path)
 	assert(err == OK)
 	
+	print("Loaded level " + level_path)
 	call_deferred("finish_loading_level")
 	
 	if(err != 0):
@@ -34,7 +34,6 @@ func load_game():
 		var load_game_data = ResourceLoader.load(FULL_FILE_PATH)
 		
 		if(load_game_data != null):
-			current_game_data = null # Clear current game state
 			current_game_data = load_game_data
 			print("Save Data found! " + FULL_FILE_PATH)
 			print_debug("Trying to load level " + current_game_data.current_level)
@@ -62,13 +61,13 @@ func save_game(current_level : String, load_position : String):
 	var new_save_data = GameData.new()
 	new_save_data.current_level = current_level
 	new_save_data.load_position = load_position
-	new_save_data.inventory = active_player.inventory
+	new_save_data.inventory = Inventory.new()
 	print_debug(str(new_save_data.inventory.Money) + " Money")
+	print_debug("Saving current level as " + current_level)
 	
 	var current_scene = get_tree().get_current_scene()
 	
 	if(current_scene is Level):
-		
 		var found_index = find_level_state_index(current_scene.filename)
 		
 		if(found_index >= 0):
@@ -76,9 +75,8 @@ func save_game(current_level : String, load_position : String):
 			new_save_data.level_states[found_index] = current_scene.get_level_state() #Replace level data
 		else:
 			new_save_data.level_states.append(current_scene.get_level_state())
-		
 	
-	assert(ResourceSaver.save(FULL_FILE_PATH, new_save_data, ResourceSaver.FLAG_BUNDLE_RESOURCES) == OK)
+	assert(ResourceSaver.save(FULL_FILE_PATH, new_save_data) == OK)
 	
 	print("GAME SAVED:" + FULL_FILE_PATH)
 

@@ -37,7 +37,7 @@ func spawn_player(player_scene : PackedScene, spawn_point_name : String):
 	else:
 		printerr("Can't find spawn point " + spawn_point_name + " in level " + self.name)
 
-func get_level_state():
+func get_level_state() -> LevelState:
 	var level_state = LevelState.new()
 	
 	level_state.filename = filename

@@ -2,7 +2,10 @@ extends Node
 
 #used for pulling display data & stat info from the player inventory resource
 
-export(Resource) var inventory 
+var inventory setget , get_player_inventory
+
+func get_player_inventory() -> Inventory:
+	return GameManager.current_game_data.inventory
 
 # var playerlevel = 1
 

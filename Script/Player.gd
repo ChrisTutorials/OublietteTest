@@ -49,7 +49,6 @@ func save_state():
 func load_state(inventory_state : Resource):
 	assert(inventory_state != null)
 	inventory = inventory_state
-	State.inventory = inventory
 
 	# Not needed, the state inventory and the player inventory resources are the same	
 	#State.coin_number = inventory.Money
