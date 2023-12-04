@@ -62,16 +62,17 @@ func save_game(current_level : String, load_position : String):
 	new_save_data.current_level = current_level
 	new_save_data.load_position = load_position
 	new_save_data.inventory = active_player.inventory
+	new_save_data.level_states = current_game_data.level_states
 	print_debug(str(new_save_data.inventory.Money) + " Money")
 	print_debug("Saving current level as " + current_level)
 	
 	var current_scene = get_tree().get_current_scene()
 	
 	if(current_scene is Level):
-		var found_index = find_level_state_index(current_scene.filename)
+		var found_index = find_level_state_index(current_scene.filename, new_save_data)
 		
 		if(found_index >= 0):
-			
+			print_debug("Found " + current_scene.filename + " at " + str(found_index))
 			new_save_data.level_states[found_index] = current_scene.get_level_state() #Replace level data
 		else:
 			new_save_data.level_states.append(current_scene.get_level_state())
@@ -85,9 +86,10 @@ func get_level_state(level_filename : String):
 		if(state.filename == level_filename):
 			return state
 
-func find_level_state_index(level_filename : String):
-	for i in len(current_game_data.level_states):
-		if(current_game_data.level_states[i].filename == level_filename):
+## Finds the index of the level in the game data if one exists
+func find_level_state_index(level_filename : String, p_game_data : GameData):
+	for i in len(p_game_data.level_states):
+		if(p_game_data.level_states[i].filename == level_filename):
 			print("Found at " + str(i))
 			return i 
 	return -1
